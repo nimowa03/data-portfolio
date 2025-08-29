@@ -1,4 +1,3 @@
-import time
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 def trading_cycle():
