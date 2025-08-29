@@ -1,6 +1,6 @@
 # Data Portfolio
 
-### 🚀 데이터로 비즈니스를 구축하고 성장시키는 제네럴리스트, 창업가의 시선으로 문제를 해결하는 데이터 사이언티스트.
+#### 🚀 데이터로 비즈니스를 구축하고 성장시키는 제네럴리스트, 창업가의 시선으로 문제를 해결하는 데이터 사이언티스트.
 
 <p align="center">
   <a href="https://github.com/nimowa03/data-portfolio/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/nimowa03/data-portfolio/actions/workflows/ci.yml/badge.svg"></a>
