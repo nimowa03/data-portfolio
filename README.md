@@ -1,5 +1,5 @@
 # Data Portfolio
-### 🚀 "데이터로 비즈니스를 구축하고 성장시키는 제너럴리스트. 창업가의 시선으로 문제를 해결하는 데이터 사이언티스트"
+## 🚀 "데이터로 비즈니스를 구축하고 성장시키는 제너럴리스트, 창업가의 시선으로 문제를 해결하는 데이터 사이언티스트"
 
 <p align="center">
   <a href="https://github.com/nimowa03/data-portfolio/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/nimowa03/data-portfolio/actions/workflows/ci.yml/badge.svg"></a>
@@ -34,8 +34,9 @@
 
 ## 👨‍💻 About Me
 
-**"직접 이커머스 비즈니스를 운영하며 '데이터가 곧 비즈니스의 언어'임을 체감했습니다.** 재고 관리, 고객 응대, 마케팅의 모든 과정에서 데이터 기반 의사결정의 힘을 경험했고, 단순히 데이터를 분석하는 것을 넘어 **비즈니스를 '구축'하고 '자동화'하는 역량**을 기르기 위해 데이터 사이언스의 길을 걷게 되었습니다.
+**"고객의 언어를 데이터로 번역하여 비즈니스 가치를 만드는 분석가"**
 
+단순한 숫자 분석을 넘어 고객의 진짜 목소리를 찾고, 이를 비즈니스 성장으로 연결하는 일에 집중합니다. **실제 마켓컬리 리뷰 2,185건을 7개 핵심 지표로 정량화**하여 '포장 만족도'가 '재구매율'에 미치는 영향을 밝혀내는 등, 데이터에 숨겨진 구체적인 인사이트를 도출합니다.
 
 ### 💪 핵심 역량: 고객 데이터 전문가
 
@@ -388,11 +389,6 @@ def trading_cycle():
 
 ---
 
-
-### 💼 Business & Product Skills
-`비즈니스 모델링 (Business Modeling)` `제품 기획 (Product Planning)` `KPI 설계 및 관리` `고객 개발 (Customer Development)` `A/B 테스트` `그로스 해킹 (Growth Hacking)`
-
----
 
 ## 🛠️ Data Analysis Tech Stack
 
