@@ -1,17 +1,140 @@
-# Data Portfolio
+# 🎯 데이터 분석가 포트폴리오
 
-#### 🧩 데이터로 비즈니스를 구축하고 성장시키는 제네럴리스트, 창업가의 시선으로 문제를 해결하는 데이터 사이언티스트.
+> **FinInsight 인턴십을 위한 전문 데이터 분석가 포트폴리오**  
+> 데이터로 비즈니스 가치를 창출하는 실전 분석가
 
-<p align="center">
-  <a href="https://github.com/nimowa03/data-portfolio/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/nimowa03/data-portfolio/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
-</p>
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?style=for-the-badge&logo=typescript)](https://typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-10-0055FF?style=for-the-badge&logo=framer)](https://framer.com/motion/)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Target-Commerce%20%26%20Fintech-00b894?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Focus-Customer%20Insight-6c5ce7?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Goal-Business%20Growth-fd79a8?style=for-the-badge" />
-</p>
+## ✨ 주요 특징
+
+### 🎨 **현대적 디자인**
+- **3D 인터랙션**: 마우스 움직임에 반응하는 동적 배경
+- **글래스모피즘**: 현대적인 투명 유리 효과
+- **부드러운 애니메이션**: Framer Motion 기반 고급 애니메이션
+- **반응형 디자인**: 모든 디바이스에서 완벽한 사용자 경험
+
+### 📊 **실시간 데이터 시각화**
+- **인터랙티브 차트**: 호버시 실시간 데이터 표시
+- **VOC 분석 결과**: 2,185건의 실제 리뷰 분석 결과
+- **성과 지표**: 암호화폐 거래 68.4% 승률 시각화
+
+### 🔧 **고급 기술 스택**
+- **프론트엔드**: Next.js 14 + TypeScript
+- **UI 라이브러리**: shadcn/ui + Radix UI
+- **애니메이션**: Framer Motion
+- **스타일링**: Tailwind CSS
+- **배포**: Vercel (권장)
+
+## 🚀 프로젝트 실행
+
+### 필수 요구사항
+- Node.js 18.x 이상
+- npm 또는 yarn
+
+### 설치 및 실행
+```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
+npm run dev
+
+# 프로덕션 빌드
+npm run build
+
+# 프로덕션 서버 실행
+npm start
+```
+
+개발 서버가 실행되면 http://localhost:3000 에서 포트폴리오를 확인할 수 있습니다.
+
+## 📁 프로젝트 구조
+
+```
+data-portfolio/
+├── app/                    # Next.js 13+ App Router
+│   ├── globals.css        # 전역 스타일
+│   ├── layout.tsx         # 루트 레이아웃
+│   └── page.tsx           # 메인 페이지
+├── components/            # 재사용 가능한 컴포넌트
+│   ├── ui/               # shadcn/ui 기본 컴포넌트
+│   ├── AboutSection.tsx  # 소개 섹션 (3D 회전 카드)
+│   ├── ContactSection.tsx # 연락처 섹션 (동적 폼)
+│   ├── Footer.tsx        # 푸터
+│   ├── Header.tsx        # 네비게이션 헤더
+│   ├── HeroSection.tsx   # 히어로 섹션 (데이터 시각화)
+│   ├── ProjectsSection.tsx # 프로젝트 섹션 (모달)
+│   └── SkillsSection.tsx  # 스킬 섹션 (진행바)
+├── lib/                  # 유틸리티 함수
+└── public/               # 정적 파일
+```
+
+## 🎯 포트폴리오 내용
+
+### 핵심 프로젝트
+1. **VOC 분석 시스템** (2023)
+   - 2,185건의 고객 리뷰 자동 분석
+   - 텍스트 마이닝 및 감정 분석
+   - 비즈니스 인사이트 도출
+
+2. **암호화폐 거래 시스템** (2023)
+   - 데이터 기반 자동 거래 알고리즘
+   - 68.4% 거래 성공률 달성
+   - 리스크 관리 및 포트폴리오 최적화
+
+3. **이커머스 데이터 대시보드** (2023-현재)
+   - 실시간 매출/고객 분석
+   - 예측 모델링 및 추천 시스템
+   - A/B 테스트 결과 분석
+
+### 기술 스킬
+- **데이터 분석**: Python, R, SQL, Excel
+- **시각화**: Tableau, Power BI, D3.js
+- **머신러닝**: Scikit-learn, TensorFlow
+- **웹 개발**: React, Next.js, TypeScript
+- **데이터베이스**: PostgreSQL, MongoDB
+
+## 🌐 배포
+
+### Vercel (권장)
+```bash
+# Vercel CLI 설치
+npm i -g vercel
+
+# 프로젝트 배포
+vercel --prod
+```
+
+### Netlify
+```bash
+# 빌드 후 dist 폴더를 Netlify에 드래그 앤 드롭
+npm run build
+```
+
+### GitHub Pages
+```bash
+# next.config.js에서 정적 export 설정 필요
+npm run build
+```
+
+## 📞 연락처
+
+- **이메일**: [contact@example.com](mailto:contact@example.com)
+- **GitHub**: [github.com/username](https://github.com)
+- **LinkedIn**: [linkedin.com/in/username](https://linkedin.com)
+
+---
+
+### 📄 라이선스
+MIT License - 자유롭게 사용, 수정, 배포 가능
+
+### 🙏 감사의 글
+- **shadcn/ui**: 아름다운 UI 컴포넌트 라이브러리
+- **Framer Motion**: 부드러운 애니메이션 라이브러리
+- **Next.js**: 강력한 React 프레임워크
 
 ---
 
