@@ -1,140 +1,112 @@
 # 🎯 데이터 분석가 포트폴리오
 
-> **FinInsight 인턴십을 위한 전문 데이터 분석가 포트폴리오**  
-> 데이터로 비즈니스 가치를 창출하는 실전 분석가
+#### 🧩 데이터로 비즈니스를 구축하고 성장시키는 제네럴리스트, 창업가의 시선으로 문제를 해결하는 데이터 분석가.
 
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?style=for-the-badge&logo=typescript)](https://typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-10-0055FF?style=for-the-badge&logo=framer)](https://framer.com/motion/)
+<p align="center">
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+</p>
 
-## ✨ 주요 특징
-
-### 🎨 **현대적 디자인**
-- **3D 인터랙션**: 마우스 움직임에 반응하는 동적 배경
-- **글래스모피즘**: 현대적인 투명 유리 효과
-- **부드러운 애니메이션**: Framer Motion 기반 고급 애니메이션
-- **반응형 디자인**: 모든 디바이스에서 완벽한 사용자 경험
-
-### 📊 **실시간 데이터 시각화**
-- **인터랙티브 차트**: 호버시 실시간 데이터 표시
-- **VOC 분석 결과**: 2,185건의 실제 리뷰 분석 결과
-- **성과 지표**: 암호화폐 거래 68.4% 승률 시각화
-
-### 🔧 **고급 기술 스택**
-- **프론트엔드**: Next.js 14 + TypeScript
-- **UI 라이브러리**: shadcn/ui + Radix UI
-- **애니메이션**: Framer Motion
-- **스타일링**: Tailwind CSS
-- **배포**: Vercel (권장)
-
-## 🚀 프로젝트 실행
-
-### 필수 요구사항
-- Node.js 18.x 이상
-- npm 또는 yarn
-
-### 설치 및 실행
-```bash
-# 의존성 설치
-npm install
-
-# 개발 서버 실행
-npm run dev
-
-# 프로덕션 빌드
-npm run build
-
-# 프로덕션 서버 실행
-npm start
-```
-
-개발 서버가 실행되면 http://localhost:3000 에서 포트폴리오를 확인할 수 있습니다.
-
-## 📁 프로젝트 구조
-
-```
-data-portfolio/
-├── app/                    # Next.js 13+ App Router
-│   ├── globals.css        # 전역 스타일
-│   ├── layout.tsx         # 루트 레이아웃
-│   └── page.tsx           # 메인 페이지
-├── components/            # 재사용 가능한 컴포넌트
-│   ├── ui/               # shadcn/ui 기본 컴포넌트
-│   ├── AboutSection.tsx  # 소개 섹션 (3D 회전 카드)
-│   ├── ContactSection.tsx # 연락처 섹션 (동적 폼)
-│   ├── Footer.tsx        # 푸터
-│   ├── Header.tsx        # 네비게이션 헤더
-│   ├── HeroSection.tsx   # 히어로 섹션 (데이터 시각화)
-│   ├── ProjectsSection.tsx # 프로젝트 섹션 (모달)
-│   └── SkillsSection.tsx  # 스킬 섹션 (진행바)
-├── lib/                  # 유틸리티 함수
-└── public/               # 정적 파일
-```
-
-## 🎯 포트폴리오 내용
-
-### 핵심 프로젝트
-1. **VOC 분석 시스템** (2023)
-   - 2,185건의 고객 리뷰 자동 분석
-   - 텍스트 마이닝 및 감정 분석
-   - 비즈니스 인사이트 도출
-
-2. **암호화폐 거래 시스템** (2023)
-   - 데이터 기반 자동 거래 알고리즘
-   - 68.4% 거래 성공률 달성
-   - 리스크 관리 및 포트폴리오 최적화
-
-3. **이커머스 데이터 대시보드** (2023-현재)
-   - 실시간 매출/고객 분석
-   - 예측 모델링 및 추천 시스템
-   - A/B 테스트 결과 분석
-
-### 기술 스킬
-- **데이터 분석**: Python, R, SQL, Excel
-- **시각화**: Tableau, Power BI, D3.js
-- **머신러닝**: Scikit-learn, TensorFlow
-- **웹 개발**: React, Next.js, TypeScript
-- **데이터베이스**: PostgreSQL, MongoDB
-
-## 🌐 배포
-
-### Vercel (권장)
-```bash
-# Vercel CLI 설치
-npm i -g vercel
-
-# 프로젝트 배포
-vercel --prod
-```
-
-### Netlify
-```bash
-# 빌드 후 dist 폴더를 Netlify에 드래그 앤 드롭
-npm run build
-```
-
-### GitHub Pages
-```bash
-# next.config.js에서 정적 export 설정 필요
-npm run build
-```
-
-## 📞 연락처
-
-- **이메일**: [contact@example.com](mailto:contact@example.com)
-- **GitHub**: [github.com/username](https://github.com)
-- **LinkedIn**: [linkedin.com/in/username](https://linkedin.com)
+<p align="center">
+  <img src="https://img.shields.io/badge/Target-Commerce%20%26%20Fintech-00b894?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Focus-Customer%20Insight-6c5ce7?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Goal-Business%20Growth-fd79a8?style=for-the-badge" />
+</p>
 
 ---
 
-### 📄 라이선스
-MIT License - 자유롭게 사용, 수정, 배포 가능
+## 🚀 Quick Impact Summary
 
-### 🙏 감사의 글
-- **shadcn/ui**: 아름다운 UI 컴포넌트 라이브러리
-- **Framer Motion**: 부드러운 애니메이션 라이브러리
-- **Next.js**: 강력한 React 프레임워크
+### 🛒 VOC Analyzer (커머스)
+> *"리뷰 2,185건을 분석하여, '포장 만족도'가 '재구매율'에 미치는 영향 등 숨은 인사이트를 발견했습니다."*
+
+- <kbd>#카테고리별_감성분석</kbd>: '맛', '가격' 등 7개 지표별 만족도 정량화
+- <kbd>#핵심_구매요인_발견</kbd>: 데이터 기반의 숨은 상관관계 도출
+- <kbd>#고객_페르소나_정의</kbd>: 특정 고객 그룹의 핵심 니즈 파악
+
+### 💹 CoinTradeSystem (핀테크)
+> *"감정을 배제하고 데이터 규칙에만 기반하여 24/7 자동으로 거래하는 시스템을 구축했습니다."*
+
+- <kbd>#24/7_자동화</kbd>: 휴먼 에러를 원천적으로 제거
+- <kbd>#3단계_리스크관리</kbd>: API 제약, 시스템 장애에 대응하는 안정성 확보
+- <kbd>#완전한_추적성</kbd>: UUID 기반으로 모든 거래 기록 및 분석
+
+---
+
+## 👨‍💻 About Me
+
+**"고객의 언어를 데이터로 번역하여 비즈니스 가치를 만드는 분석가"**
+
+단순한 숫자 분석을 넘어 고객의 진짜 목소리를 찾고, 이를 비즈니스 성장으로 연결하는 일에 집중합니다. **실제 마켓컬리 리뷰 2,185건을 7개 핵심 지표로 정량화**하여 '포장 만족도'가 '재구매율'에 미치는 영향을 밝혀내는 등, 데이터에 숨겨진 구체적인 인사이트를 도출합니다.
+
+### 📸 실제 동작하는 프로젝트 스크린샷
+
+**🛒 VOC Analyzer - 마켓컬리 고객 후기 인사이트**
+
+| 개요 | 상품 종합 | 구매자 유형/강·약점 | 카테고리 상세 |
+|---|---|---|---|
+| <img src="docs/voc_overview.png" alt="VOC overview"/> | <img src="docs/voc_product.png" alt="VOC product summary"/> | <img src="docs/voc_buyer_strengths.png" alt="Buyer types & strengths"/> | <img src="docs/voc_category_detail.png" alt="Category drilldown"/> |
+
+---
+
+**💹 CoinTradeSystem - 암호화폐 자동거래 시스템**
+| 아키텍처/플로우 | 매매 시점 분석 | 도커 컨테이너 주문 체결 로그 |
+|---|---|---|
+| <img src="docs/coin_architecture.png" alt="Architecture & flow"/> | <img src="docs/coin_market_analysis.png" alt="Trade timing analysis"/> | <img src="docs/coin1.png" alt="Trade timing analysis"/> |
+
+> 스크린샷은 샘플/연구용 데이터 기준이며, 수집 범위에 따라 값이 달라질 수 있습니다.
+
+---
+
+## 🛠️ Data Analysis Tech Stack
+
+### 📊 Core Analysis
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+
+### 🤖 AI/ML Applications
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+
+### 📈 Visualization & Dashboards
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
+
+### 🗄️ Database & Infrastructure  
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+---
+
+## 📬 Contact Me
+
+<p align="center">
+  <b>"고객의 목소리를 데이터로 번역하여, 함께 성장할 준비가 되어있습니다"</b>
+</p>
+
+<p align="center">
+  <a href="mailto:nimowa03@gmail.com">
+    <img src="https://img.shields.io/badge/Email-nimowa03@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://github.com/nimowa03">
+    <img src="https://img.shields.io/badge/GitHub-nimowa03-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/nimowa03">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</p>
+
+---
+
+<p align="center">
+  <sub>💡 모든 프로젝트는 실제 작동하는 코드와 함께 제공됩니다</sub><br/>
+  <sub>🎯 커머스 × 핀테크 분야 데이터 분석가 포지션 지원 중</sub><br/>
+  <sub>⭐ 이 포트폴리오가 도움이 되셨다면 Star를 눌러주세요!</sub>
+</p>
 
 ---
 
