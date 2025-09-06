@@ -1,79 +1,70 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { Header } from '@/components/Header'
-import { HeroSection } from '@/components/HeroSection'
-import { AboutSection } from '@/components/AboutSection'
-import { ProjectsSection } from '@/components/ProjectsSection'
-import { SkillsSection } from '@/components/SkillsSection'
-import { ContactSection } from '@/components/ContactSection'
-import { Footer } from '@/components/Footer'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Sidebar } from '@/components/dashboard/Sidebar'
+import { StatsOverview } from '@/components/dashboard/StatsOverview'
+import { ProjectGrid } from '@/components/dashboard/ProjectGrid'
+import { SkillsChart } from '@/components/dashboard/SkillsChart'
+import { ContactPanel } from '@/components/dashboard/ContactPanel'
 
 export default function Home() {
-  const { scrollYProgress } = useScroll()
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
+  const [activeSection, setActiveSection] = useState('overview')
+
+  const renderContent = () => {
+    switch (activeSection) {
+      case 'overview':
+        return <StatsOverview />
+      case 'projects':
+        return <ProjectGrid />
+      case 'skills':
+        return <SkillsChart />
+      case 'contact':
+        return <ContactPanel />
+      default:
+        return <StatsOverview />
+    }
+  }
 
   return (
-    <main className="relative">
-      {/* Scroll Progress Indicator */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-blue-600 z-50 origin-left"
-        style={{ scaleX: scrollYProgress }}
-      />
-
-      {/* Floating Navigation Dots */}
-      <div className="fixed right-8 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col space-y-4">
-        {['hero', 'about', 'projects', 'skills', 'contact'].map((section) => (
-          <button
-            key={section}
-            onClick={() => document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-3 h-3 rounded-full border-2 border-primary/30 bg-background/80 hover:bg-primary hover:border-primary transition-all duration-300 hover:scale-125"
-            aria-label={`${section} 섹션으로 이동`}
-          />
-        ))}
-      </div>
-
-      <Header />
+    <div className="flex h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Sidebar */}
+      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
       
-      <div id="hero">
-        <HeroSection />
+      {/* Main Dashboard Area */}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Top Header */}
+        <header className="bg-white border-b border-slate-200 px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-2xl font-bold text-slate-900">데이터 분석가 대시보드</h1>
+              <p className="text-slate-600">실시간 포트폴리오 및 성과 지표</p>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-sm text-slate-600">실시간 데이터</span>
+              </div>
+              <div className="text-sm text-slate-500">
+                최종 업데이트: {new Date().toLocaleDateString('ko-KR')}
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Content Area */}
+        <main className="flex-1 overflow-auto bg-slate-50">
+          <motion.div
+            key={activeSection}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="p-6"
+          >
+            {renderContent()}
+          </motion.div>
+        </main>
       </div>
-
-      <div id="about">
-        <AboutSection />
-      </div>
-
-      <div id="projects">
-        <ProjectsSection />
-      </div>
-
-      <div id="skills">
-        <SkillsSection />
-      </div>
-
-      <div id="contact">
-        <ContactSection />
-      </div>
-
-      <Footer />
-
-      {/* Scroll to Top Button */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ 
-          opacity: scrollYProgress.get() > 0.2 ? 1 : 0,
-          scale: scrollYProgress.get() > 0.2 ? 1 : 0 
-        }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 p-3 bg-primary text-primary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-40"
-        aria-label="맨 위로 스크롤"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-      </motion.button>
-    </main>
+    </div>
   )
 }
