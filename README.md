@@ -14,6 +14,12 @@
 
 ---
 
+## 👨‍💻 About Me
+
+**"고객의 언어를 데이터로 번역하여 비즈니스 가치를 만드는 분석가"**
+
+단순한 숫자 분석을 넘어 고객의 진짜 목소리를 찾고, 이를 비즈니스 성장으로 연결하는 일에 집중합니다. **실제 마켓컬리 리뷰 2,185건을 7개 핵심 지표로 정량화**하여 '포장 만족도'가 '재구매율'에 미치는 영향을 밝혀내는 등, 데이터에 숨겨진 구체적한 인사이트를 도출합니다.
+
 ## 🚀 Quick Impact Summary
 
 ### 🛒 VOC Analyzer (커머스)
@@ -29,14 +35,6 @@
 - <kbd>#24/7_자동화</kbd>: 휴먼 에러를 원천적으로 제거
 - <kbd>#3단계_리스크관리</kbd>: API 제약, 시스템 장애에 대응하는 안정성 확보
 - <kbd>#완전한_추적성</kbd>: UUID 기반으로 모든 거래 기록 및 분석
-
----
-
-## 👨‍💻 About Me
-
-**"고객의 언어를 데이터로 번역하여 비즈니스 가치를 만드는 분석가"**
-
-단순한 숫자 분석을 넘어 고객의 진짜 목소리를 찾고, 이를 비즈니스 성장으로 연결하는 일에 집중합니다. **실제 마켓컬리 리뷰 2,185건을 7개 핵심 지표로 정량화**하여 '포장 만족도'가 '재구매율'에 미치는 영향을 밝혀내는 등, 데이터에 숨겨진 구체적인 인사이트를 도출합니다.
 
 ### 📸 실제 동작하는 프로젝트 스크린샷
 
@@ -81,58 +79,6 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 ---
-
-## 📬 Contact Me
-
-<p align="center">
-  <b>"고객의 목소리를 데이터로 번역하여, 함께 성장할 준비가 되어있습니다"</b>
-</p>
-
-<p align="center">
-  <a href="mailto:nimowa03@gmail.com">
-    <img src="https://img.shields.io/badge/Email-nimowa03@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://github.com/nimowa03">
-    <img src="https://img.shields.io/badge/GitHub-nimowa03-181717?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://www.linkedin.com/in/nimowa03">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-</p>
-
----
-
-<p align="center">
-  <sub>💡 모든 프로젝트는 실제 작동하는 코드와 함께 제공됩니다</sub><br/>
-  <sub>🎯 커머스 × 핀테크 분야 데이터 분석가 포지션 지원 중</sub><br/>
-  <sub>⭐ 이 포트폴리오가 도움이 되셨다면 Star를 눌러주세요!</sub>
-</p>
-
----
-
-## 🚀 Quick Impact Summary
-
-### 🛒 VOC Analyzer (커머스)
-> *“리뷰 2,185건을 분석하여, ‘포장 만족도’가 ‘재구매율’에 미치는 영향 등 숨은 인사이트를 발견했습니다.”*
-
-- <kbd>#카테고리별_감성분석</kbd>: '맛', '가격' 등 7개 지표별 만족도 정량화
-- <kbd>#핵심_구매요인_발견</kbd>: 데이터 기반의 숨은 상관관계 도출
-- <kbd>#고객_페르소나_정의</kbd>: 특정 고객 그룹의 핵심 니즈 파악
-
-### 💹 CoinTradeSystem (핀테크)
-> *“감정을 배제하고 데이터 규칙에만 기반하여 24/7 자동으로 거래하는 시스템을 구축했습니다.”*
-
-- <kbd>#24/7_자동화</kbd>: 휴먼 에러를 원천적으로 제거
-- <kbd>#3단계_리스크관리</kbd>: API 제약, 시스템 장애에 대응하는 안정성 확보
-- <kbd>#완전한_추적성</kbd>: UUID 기반으로 모든 거래 기록 및 분석
-
----
-
-## 👨‍💻 About Me
-
-**"고객의 언어를 데이터로 번역하여 비즈니스 가치를 만드는 분석가"**
-
-단순한 숫자 분석을 넘어 고객의 진짜 목소리를 찾고, 이를 비즈니스 성장으로 연결하는 일에 집중합니다. **실제 마켓컬리 리뷰 2,185건을 7개 핵심 지표로 정량화**하여 '포장 만족도'가 '재구매율'에 미치는 영향을 밝혀내는 등, 데이터에 숨겨진 구체적인 인사이트를 도출합니다.
 
 ### 💪 핵심 역량: 고객 데이터 전문가
 
@@ -464,31 +410,6 @@ def trading_cycle():
 </td>
 </tr>
 </table>
-
----
-
-## 🛠️ Data Analysis Tech Stack
-
-### 📊 Core Analysis
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-
-### 🤖 AI/ML Applications
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-
-### 📈 Visualization & Dashboards
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
-
-### 🗄️ Database & Infrastructure  
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 ---
 
