@@ -1,395 +1,363 @@
 'use client'
 
-import { useState, useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { Mail, Phone, MessageCircle, Send, MapPin, Clock, Github, Linkedin } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Mail, Github, Linkedin, MapPin, User, MessageCircle, Send } from 'lucide-react'
 
 export function ContactSection() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const isInView = useInView(containerRef, { once: true, margin: "-100px" })
-  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: ''
   })
-  
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+      setTimeout(() => setSubmitStatus('idle'), 5000)
+    }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    setSubmitStatus('success')
-    setIsSubmitting(false)
-    
-    // Reset form after success
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' })
-      setSubmitStatus('idle')
-    }, 3000)
-  }
+  const contactMethods = [
+    {
+      icon: Mail,
+      title: 'Email',
+      value: 'nimowa03@gmail.com',
+      href: 'mailto:nimowa03@gmail.com',
+      description: '업무 문의 및 포지션 상담',
+      color: 'red'
+    },
+    {
+      icon: Github,
+      title: 'GitHub',
+      value: 'nimowa03',
+      href: 'https://github.com/nimowa03',
+      description: '프로젝트 코드 및 포트폴리오',
+      color: 'gray'
+    },
+    {
+      icon: Linkedin,
+      title: 'LinkedIn',
+      value: 'changsoo-lee',
+      href: 'https://www.linkedin.com/in/changsoo-lee-2870b3383',
+      description: '커리어 및 네트워킹',
+      color: 'blue'
+    }
+  ]
+
+  const highlights = [
+    {
+      icon: User,
+      title: '데이터 분석가',
+      description: '커머스 × 핀테크 전문'
+    },
+    {
+      icon: MapPin,
+      title: '위치',
+      description: '서울, 대한민국'
+    },
+    {
+      icon: MessageCircle,
+      title: '상태',
+      description: '채용 기회 열려있음'
+    }
+  ]
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.6,
-        staggerChildren: 0.1
+        staggerChildren: 0.2
       }
     }
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }
+      transition: { duration: 0.6 }
     }
   }
 
-  const contactMethods = [
-    {
-      icon: Mail,
-      label: '이메일',
-      value: 'contact@example.com',
-      description: '24시간 내 답변',
-      color: 'from-blue-400 to-blue-600'
-    },
-    {
-      icon: Phone,
-      label: '전화',
-      value: '+82-10-0000-0000',
-      description: '평일 9:00-18:00',
-      color: 'from-emerald-400 to-emerald-600'
-    },
-    {
-      icon: MessageCircle,
-      label: '카카오톡',
-      value: '@dataanalyst',
-      description: '실시간 상담',
-      color: 'from-yellow-400 to-yellow-600'
+  const getColorClasses = (color: string) => {
+    const colors = {
+      red: 'text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-900/20 hover:bg-red-200 dark:hover:bg-red-900/30',
+      blue: 'text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/20 hover:bg-blue-200 dark:hover:bg-blue-900/30',
+      gray: 'text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700'
     }
-  ]
-
-  const socialLinks = [
-    {
-      icon: Github,
-      label: 'GitHub',
-      url: 'https://github.com',
-      description: '프로젝트 코드',
-      color: 'hover:text-gray-700 dark:hover:text-gray-300'
-    },
-    {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      url: 'https://linkedin.com',
-      description: '경력 정보',
-      color: 'hover:text-blue-600'
-    }
-  ]
+    return colors[color as keyof typeof colors] || colors.gray
+  }
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-background via-background to-muted/20 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-      <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="contact" className="section-padding bg-slate-50 dark:bg-slate-900">
+      <div className="max-w-6xl mx-auto container-padding">
         <motion.div
-          ref={containerRef}
-          variants={containerVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="max-w-7xl mx-auto"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <motion.div
-              className="inline-flex items-center px-4 py-2 glass-effect rounded-full text-sm font-medium border mb-6"
-              whileHover={{ scale: 1.05 }}
-            >
-              <Mail className="w-4 h-4 mr-2 text-primary" />
-              <span className="gradient-text">연락하기</span>
+          <div className="text-center mb-16">
+            <motion.div variants={itemVariants} className="badge-modern mb-4">
+              연락하기
             </motion.div>
-            
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              함께 데이터의 가치를
-              <br />
-              <span className="gradient-text">발견해보세요</span>
-            </h2>
-            
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              새로운 프로젝트나 협업 기회에 대해 언제든 연락주세요.
-              <br />
-              데이터 분석을 통해 비즈니스 가치를 창출하는 방법을 함께 논의해보겠습니다.
-            </p>
-          </motion.div>
+            <motion.h2 variants={itemVariants} className="text-4xl font-bold text-gradient mb-4">
+              함께 성장할 기회를 찾고 있습니다
+            </motion.h2>
+            <motion.p variants={itemVariants} className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+              고객의 목소리를 데이터로 번역하여, 함께 성장할 준비가 되어있습니다
+            </motion.p>
+          </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-3 gap-8">
             {/* Contact Form */}
-            <motion.div variants={itemVariants}>
-              <div className="glass-effect p-8 rounded-2xl border hover:shadow-2xl transition-all duration-500">
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold gradient-text mb-2">메시지 보내기</h3>
-                  <p className="text-muted-foreground">궁금한 점이 있으시면 언제든 연락주세요</p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
+            <motion.div variants={itemVariants} className="lg:col-span-2">
+              <div className="card-modern">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-6">
+                  메시지 보내기
+                </h3>
+                
+                {/* Contact Form */}
+                <form onSubmit={handleSubmit} className="space-y-4 mb-8">
                   <div className="grid md:grid-cols-2 gap-4">
-                    <motion.div
-                      whileFocus={{ scale: 1.02 }}
-                      className="space-y-2"
-                    >
-                      <label className="text-sm font-medium">이름</label>
-                      <Input
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                        이름
+                      </label>
+                      <input
+                        type="text"
                         name="name"
                         value={formData.name}
-                        onChange={handleInputChange}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-slate-500 focus:border-transparent"
                         placeholder="홍길동"
-                        className="glass-effect border-0 focus:ring-2 focus:ring-primary/50"
-                        required
                       />
-                    </motion.div>
-                    
-                    <motion.div
-                      whileFocus={{ scale: 1.02 }}
-                      className="space-y-2"
-                    >
-                      <label className="text-sm font-medium">이메일</label>
-                      <Input
-                        name="email"
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                        이메일
+                      </label>
+                      <input
                         type="email"
+                        name="email"
                         value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="contact@example.com"
-                        className="glass-effect border-0 focus:ring-2 focus:ring-primary/50"
+                        onChange={handleChange}
                         required
+                        className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-slate-500 focus:border-transparent"
+                        placeholder="contact@example.com"
                       />
-                    </motion.div>
+                    </div>
                   </div>
-
-                  <motion.div
-                    whileFocus={{ scale: 1.02 }}
-                    className="space-y-2"
-                  >
-                    <label className="text-sm font-medium">제목</label>
-                    <Input
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      placeholder="프로젝트 협업 문의"
-                      className="glass-effect border-0 focus:ring-2 focus:ring-primary/50"
-                      required
-                    />
-                  </motion.div>
-
-                  <motion.div
-                    whileFocus={{ scale: 1.02 }}
-                    className="space-y-2"
-                  >
-                    <label className="text-sm font-medium">메시지</label>
-                    <Textarea
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                      메시지
+                    </label>
+                    <textarea
                       name="message"
                       value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="안녕하세요, 데이터 분석 프로젝트에 대해 문의드리고 싶습니다..."
-                      rows={6}
-                      className="glass-effect border-0 focus:ring-2 focus:ring-primary/50 resize-none"
+                      onChange={handleChange}
                       required
+                      rows={4}
+                      className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-slate-500 focus:border-transparent resize-none"
+                      placeholder="안녕하세요, 데이터 분석 프로젝트에 대해 문의드리고 싶습니다..."
                     />
-                  </motion.div>
-
-                  <Button
+                  </div>
+                  
+                  {submitStatus === 'success' && (
+                    <div className="p-3 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-lg text-sm">
+                      메시지가 성공적으로 전송되었습니다!
+                    </div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <div className="p-3 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 rounded-lg text-sm">
+                      메시지 전송 중 오류가 발생했습니다. 다시 시도해주세요.
+                    </div>
+                  )}
+                  
+                  <button
                     type="submit"
-                    variant="gradient"
-                    size="xl"
-                    className="w-full group relative overflow-hidden"
                     disabled={isSubmitting}
+                    className="w-full bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-6 py-3 rounded-lg font-medium hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
-                      <motion.div
-                        className="flex items-center"
-                        animate={{ scale: [1, 1.05, 1] }}
-                        transition={{ duration: 1, repeat: Infinity }}
-                      >
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                      <>
+                        <div className="w-4 h-4 border-2 border-white dark:border-slate-900 border-t-transparent rounded-full animate-spin"></div>
                         전송 중...
-                      </motion.div>
-                    ) : submitStatus === 'success' ? (
-                      <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        className="text-white"
-                      >
-                        ✓ 전송 완료!
-                      </motion.div>
+                      </>
                     ) : (
                       <>
+                        <Send className="w-4 h-4" />
                         메시지 전송
-                        <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                       </>
                     )}
-                    
-                    {/* Ripple Effect */}
-                    <motion.div
-                      className="absolute inset-0 bg-white/20 rounded-full scale-0"
-                      whileTap={{ scale: 4, opacity: 0 }}
-                      transition={{ duration: 0.4 }}
-                    />
-                  </Button>
+                  </button>
                 </form>
+
+                <div className="border-t border-slate-200 dark:border-slate-700 pt-6">
+                  <h4 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
+                    직접 연락
+                  </h4>
+                
+                  {/* Contact Methods */}
+                  <div className="space-y-3">
+                    {contactMethods.map((method) => {
+                      const Icon = method.icon
+                      return (
+                        <motion.a
+                          key={method.title}
+                          href={method.href}
+                          target={method.title !== 'Email' ? '_blank' : undefined}
+                          rel={method.title !== 'Email' ? 'noopener noreferrer' : undefined}
+                          className="flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-slate-50 dark:hover:bg-slate-800"
+                          whileHover={{ x: 2 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <div className={`p-2 rounded-lg ${getColorClasses(method.color)}`}>
+                            <Icon className="w-4 h-4" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="font-medium text-slate-900 dark:text-slate-100 text-sm">
+                              {method.title}
+                            </div>
+                            <div className="text-slate-600 dark:text-slate-400 text-sm">
+                              {method.value}
+                            </div>
+                          </div>
+                        </motion.a>
+                      )
+                    })}
+                  </div>
+                </div>
               </div>
             </motion.div>
 
-            {/* Contact Information */}
-            <motion.div variants={itemVariants} className="space-y-8">
-              {/* Contact Methods */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold mb-6">연락 방법</h3>
-                {contactMethods.map((method, index) => (
-                  <motion.div
-                    key={method.label}
-                    className="group glass-effect p-6 rounded-xl border hover:border-primary/50 transition-all duration-300 cursor-pointer"
-                    whileHover={{ scale: 1.02, y: -2 }}
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-                    transition={{ delay: index * 0.1 + 0.3 }}
-                  >
-                    <div className="flex items-start space-x-4">
-                      <motion.div
-                        className={`p-3 rounded-lg bg-gradient-to-r ${method.color} text-white`}
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <method.icon className="w-6 h-6" />
-                      </motion.div>
-                      
-                      <div className="flex-1">
-                        <h4 className="font-semibold mb-1">{method.label}</h4>
-                        <p className="text-lg font-mono text-primary mb-1">{method.value}</p>
-                        <p className="text-sm text-muted-foreground flex items-center">
-                          <Clock className="w-3 h-3 mr-1" />
-                          {method.description}
-                        </p>
+            {/* Additional Info */}
+            <motion.div variants={itemVariants} className="space-y-6">
+              {/* Profile Highlights */}
+              <div className="card-modern">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
+                  프로필 정보
+                </h3>
+                <div className="space-y-3">
+                  {highlights.map((highlight) => {
+                    const Icon = highlight.icon
+                    return (
+                      <div key={highlight.title} className="flex items-center gap-3">
+                        <Icon className="w-5 h-5 text-slate-500 dark:text-slate-400" />
+                        <div>
+                          <div className="font-medium text-slate-900 dark:text-slate-100 text-sm">
+                            {highlight.title}
+                          </div>
+                          <div className="text-slate-600 dark:text-slate-400 text-sm">
+                            {highlight.description}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
+                    )
+                  })}
+                </div>
               </div>
 
-              {/* Location */}
-              <motion.div
-                className="glass-effect p-6 rounded-xl border"
-                whileHover={{ scale: 1.02 }}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ delay: 0.6 }}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-indigo-400 to-purple-600 text-white">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">위치</h4>
-                    <p className="text-muted-foreground">서울특별시</p>
-                    <p className="text-sm text-muted-foreground mt-1">원격 근무 가능</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Social Links */}
-              <div>
-                <h3 className="text-xl font-bold mb-4">소셜 미디어</h3>
-                <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
-                    <motion.a
-                      key={social.label}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`group glass-effect p-4 rounded-xl border transition-all duration-300 ${social.color}`}
-                      whileHover={{ scale: 1.1, y: -5 }}
-                      whileTap={{ scale: 0.95 }}
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
-                      transition={{ delay: index * 0.1 + 0.8 }}
-                    >
-                      <social.icon className="w-6 h-6" />
-                      <div className="absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-1 bg-foreground text-background text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        {social.description}
-                      </div>
-                    </motion.a>
+              {/* Interest Areas */}
+              <div className="card-modern">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
+                  관심 분야
+                </h3>
+                <div className="space-y-2">
+                  {[
+                    '이커머스 데이터 분석',
+                    '핀테크 고객 인사이트',
+                    '자동화 시스템 구축',
+                    '비즈니스 성장 전략'
+                  ].map((area) => (
+                    <div key={area} className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                      <span className="text-sm text-slate-600 dark:text-slate-400">
+                        {area}
+                      </span>
+                    </div>
                   ))}
                 </div>
               </div>
 
-              {/* Availability Status */}
-              <motion.div
-                className="glass-effect p-6 rounded-xl border-l-4 border-l-emerald-500 bg-emerald-50 dark:bg-emerald-950/20"
-                initial={{ opacity: 0, x: 30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-                transition={{ delay: 1 }}
-              >
-                <div className="flex items-center space-x-3">
-                  <motion.div
-                    className="w-3 h-3 bg-emerald-500 rounded-full"
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
-                  <div>
-                    <h4 className="font-semibold text-emerald-700 dark:text-emerald-300">현재 상태</h4>
-                    <p className="text-sm text-emerald-600 dark:text-emerald-400">
-                      새로운 프로젝트 및 협업 기회에 열려있습니다
-                    </p>
+              {/* Quick Stats */}
+              <div className="card-modern bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
+                  포트폴리오 한눈에
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                      2
+                    </div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400">
+                      완료된 프로젝트
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                      2,185
+                    </div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400">
+                      분석된 리뷰
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                      68.4%
+                    </div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400">
+                      거래 승률
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                      80%
+                    </div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400">
+                      시간 단축
+                    </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
           </div>
         </motion.div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(15)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-primary/30 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 0.7, 0.3],
-              scale: [1, 1.5, 1],
-            }}
-            transition={{
-              duration: 4 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
       </div>
     </section>
   )

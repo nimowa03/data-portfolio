@@ -467,25 +467,6 @@ def trading_cycle():
 
 ---
 
-### 📸 실제 동작하는 프로젝트 스크린샷
-
-**🛒 VOC Analyzer - 마켓컬리 고객 후기 인사이트**
-
-| 개요 | 상품 종합 | 구매자 유형/강·약점 | 카테고리 상세 |
-|---|---|---|---|
-| <img src="docs/voc_overview.png" alt="VOC overview"/> | <img src="docs/voc_product.png" alt="VOC product summary"/> | <img src="docs/voc_buyer_strengths.png" alt="Buyer types & strengths"/> | <img src="docs/voc_category_detail.png" alt="Category drilldown"/> |
----
-
-**💹 CoinTradeSystem - 암호화폐 자동거래 시스템**
-| 아키텍처/플로우 | 매매 시점 분석 | 도커 컨테이너 주문 체결 로그 |
-|---|---|---|
-| <img src="docs/coin_architecture.png" alt="Architecture & flow"/> | <img src="docs/coin_market_analysis.png" alt="Trade timing analysis"/> | <img src="docs/coin1.png" alt="Trade timing analysis"/> |
-
-> 스크린샷은 샘플/연구용 데이터 기준이며, 수집 범위에 따라 값이 달라질 수 있습니다.
-
----
-
-
 ## 🛠️ Data Analysis Tech Stack
 
 ### 📊 Core Analysis
@@ -613,6 +594,6 @@ docker-compose up -d
 
 <p align="center">
   <sub>💡 모든 프로젝트는 실제 작동하는 코드와 함께 제공됩니다</sub><br/>
-  <sub>🎯 커머스 × 핀테크 분야 데이터 분석가 포지션 지원 중</sub><br/>
+  <sub>🎯 이커머스 × 핀테크 분야 데이터 분석가 포지션 지원 중</sub><br/>
   <sub>⭐ 이 포트폴리오가 도움이 되셨다면 Star를 눌러주세요!</sub>
 </p>
