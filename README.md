@@ -20,40 +20,6 @@
 
 단순한 숫자 분석을 넘어 고객의 진짜 목소리를 찾고, 이를 비즈니스 성장으로 연결하는 일에 집중합니다. **실제 마켓컬리 리뷰 2,185건을 7개 핵심 지표로 정량화**하여 '포장 만족도'가 '재구매율'에 미치는 영향을 밝혀내는 등, 데이터에 숨겨진 구체적한 인사이트를 도출합니다.
 
-## 🚀 Quick Impact Summary
-
-### 🛒 VOC Analyzer (커머스)
-> *"리뷰 2,185건을 분석하여, '포장 만족도'가 '재구매율'에 미치는 영향 등 숨은 인사이트를 발견했습니다."*
-
-- <kbd>#카테고리별_감성분석</kbd>: '맛', '가격' 등 7개 지표별 만족도 정량화
-- <kbd>#핵심_구매요인_발견</kbd>: 데이터 기반의 숨은 상관관계 도출
-- <kbd>#고객_페르소나_정의</kbd>: 특정 고객 그룹의 핵심 니즈 파악
-
-### 💹 CoinTradeSystem (핀테크)
-> *"감정을 배제하고 데이터 규칙에만 기반하여 24/7 자동으로 거래하는 시스템을 구축했습니다."*
-
-- <kbd>#24/7_자동화</kbd>: 휴먼 에러를 원천적으로 제거
-- <kbd>#3단계_리스크관리</kbd>: API 제약, 시스템 장애에 대응하는 안정성 확보
-- <kbd>#완전한_추적성</kbd>: UUID 기반으로 모든 거래 기록 및 분석
-
-### 📸 실제 동작하는 프로젝트 스크린샷
-
-**🛒 VOC Analyzer - 마켓컬리 고객 후기 인사이트**
-
-| 개요 | 상품 종합 | 구매자 유형/강·약점 | 카테고리 상세 |
-|---|---|---|---|
-| <img src="docs/voc_overview.png" alt="VOC overview"/> | <img src="docs/voc_product.png" alt="VOC product summary"/> | <img src="docs/voc_buyer_strengths.png" alt="Buyer types & strengths"/> | <img src="docs/voc_category_detail.png" alt="Category drilldown"/> |
-
----
-
-**💹 CoinTradeSystem - 암호화폐 자동거래 시스템**
-| 아키텍처/플로우 | 매매 시점 분석 | 도커 컨테이너 주문 체결 로그 |
-|---|---|---|
-| <img src="docs/coin_architecture.png" alt="Architecture & flow"/> | <img src="docs/coin_market_analysis.png" alt="Trade timing analysis"/> | <img src="docs/coin1.png" alt="Trade timing analysis"/> |
-
-> 스크린샷은 샘플/연구용 데이터 기준이며, 수집 범위에 따라 값이 달라질 수 있습니다.
-
----
 
 ## 🛠️ Data Analysis Tech Stack
 
@@ -77,24 +43,6 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-
----
-
-### 💪 핵심 역량: 고객 데이터 전문가
-
-🛒 **커머스 도메인 전문성**
-- **고객 경험 기반 문제 해결**: 개인적인 쇼핑 경험의 불편함에서 착안, `VOC 분석 시스템`을 직접 구축하여 해결
-- **구매 여정 분석**: 고객 리뷰 데이터에서 '맛', '가격', '품질' 등 **핵심 구매 결정 요인**을 정량적으로 분석
-- **VOC의 자산화**: 2,000건이 넘는 비정형 텍스트를 **구조화된 데이터로 변환**하여 실행 가능한 비즈니스 자산으로 전환
-
-💰 **핀테크 도메인 이해**
-- **금융 데이터 특성 고려 설계**: Upbit API의 **레이트리밋, 호가 단위 등 현실적 제약**을 반영한 안정적인 `자동 거래 시스템` 구축
-- **리스크 관리 중심 시스템**: **3단계 안전장치**와 **UUID 거래 추적** 시스템을 적용하여 휴먼 에러 및 시스템 장애에 대응
-- **24/7 자동화**: 스케줄러와 DB 트랜잭션을 활용하여 **24시간 중단 없는** 데이터 처리 및 거래 자동화 구현
-
-🔧 **실무 중심 문제 해결**
-- **"완벽함"보다 "실행 가능함"**: Pydantic 스키마 적용, 배치 처리 등 **안정성과 비용 효율성**을 고려한 현실적인 솔루션 설계
-- **비개발자와의 소통**: 분석 결과를 Streamlit **인터랙티브 대시보드**로 시각화하여 누구나 쉽게 이해하고 활용할 수 있도록 지원
 
 ---
 
