@@ -493,6 +493,14 @@ docker-compose up -d
 
 ---
 
+<p align="center">
+  <sub>💡 모든 프로젝트는 실제 작동하는 코드와 함께 제공됩니다</sub><br/>
+  <sub>🎯 이커머스 × 핀테크 분야 데이터 분석가 포지션 지원 중</sub><br/>
+  <sub>⭐ 이 포트폴리오가 도움이 되셨다면 Star를 눌러주세요!</sub>
+</p>
+
+---
+
 ## 📬 Contact Me
 
 <p align="center">
@@ -509,12 +517,4 @@ docker-compose up -d
   <a href="https://www.linkedin.com/in/nimowa03">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-</p>
-
----
-
-<p align="center">
-  <sub>💡 모든 프로젝트는 실제 작동하는 코드와 함께 제공됩니다</sub><br/>
-  <sub>🎯 이커머스 × 핀테크 분야 데이터 분석가 포지션 지원 중</sub><br/>
-  <sub>⭐ 이 포트폴리오가 도움이 되셨다면 Star를 눌러주세요!</sub>
 </p>
