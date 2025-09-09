@@ -17,8 +17,8 @@ export default function Home() {
         <section id="projects">
           <ProjectsSection />
         </section>
-        <section id="tech-stack">
-          <TechStackSection />
+        <section id="skills">
+          <SkillsSection />
         </section>
         <section id="contact">
           <ContactSection />
