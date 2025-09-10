@@ -3,8 +3,9 @@
 import { useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Target, Lightbulb, Cog, Users, ShoppingCart, TrendingUp, Sparkles, Brain } from 'lucide-react'
+import { Target, Lightbulb, Cog, Users, ShoppingCart, TrendingUp, Sparkles, Brain, Calendar, Award, GraduationCap, Briefcase, BookOpen, Download } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 
 export function AboutSection() {
   const ref = useRef(null)
@@ -69,6 +70,43 @@ export function AboutSection() {
     }
   ]
 
+  const timeline = [
+    {
+      date: "2025.03 - 현재",
+      title: "한국방송통신대학교 AI학과",
+      company: "학부 재학",
+      description: "통계학, 머신러닝, 딥러닝 이론 학습 중",
+      type: "education"
+    },
+    {
+      date: "2024.09 - 2024.12",
+      title: "청년취업사관학교 새싹×FinInsight",
+      company: "부트캠프",
+      description: "실무 프로젝트 기반 데이터 분석 교육 수료",
+      type: "education"
+    },
+    {
+      date: "2024.06 - 현재",
+      title: "개인 프로젝트 (포트폴리오)",
+      company: "학습 프로젝트",
+      description: "VOC 분석, 감성분석 등 실습 프로젝트 진행",
+      type: "work"
+    },
+    {
+      date: "2023.01 - 현재",
+      title: "온라인 쇼핑몰 운영 (부업)",
+      company: "개인사업",
+      description: "데이터 분석의 실제 적용 경험",
+      type: "work"
+    }
+  ]
+
+  const certifications = [
+    { name: "ADsP (데이터분석준전문가)", issuer: "한국데이터산업진흥원", date: "2024.09" },
+    { name: "SQLD (SQL개발자)", issuer: "한국데이터산업진흥원", date: "준비 중" },
+    { name: "빅데이터분석기사", issuer: "한국데이터산업진흥원", date: "2025년 목표" }
+  ]
+
   return (
     <section ref={ref} className="py-20 bg-gradient-to-br from-background via-blue-50/30 to-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,7 +122,7 @@ export function AboutSection() {
             whileHover={{ scale: 1.05 }}
           >
             <Brain className="w-4 h-4 mr-2 text-primary" />
-            <span className="gradient-text">About Me</span>
+            <span className="gradient-text">About Me & Resume</span>
             <Sparkles className="w-4 h-4 ml-2 text-yellow-500" />
           </motion.div>
           
@@ -99,25 +137,23 @@ export function AboutSection() {
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <div className="relative glass-effect p-8 rounded-2xl border">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue-600/5 rounded-2xl blur-xl" />
-              <blockquote className="text-xl md:text-2xl font-medium leading-relaxed relative z-10">
-                <span className="text-primary text-6xl absolute -top-4 -left-2">"</span>
-                <span className="gradient-text">고객의 언어를 데이터로 번역하여 비즈니스 가치를 만드는 분석가</span>
-                <span className="text-primary text-6xl absolute -bottom-8 -right-2">"</span>
+            <div className="relative bg-white p-6 rounded-xl border border-blue-200 shadow-sm">
+              <blockquote className="text-lg md:text-xl font-medium leading-relaxed text-gray-700 text-center">
+                "데이터로 시민의 목소리를 듣고, 더 나은 정책을 만드는 데 기여하고 싶습니다"
               </blockquote>
             </div>
           </motion.div>
           
           <motion.p
-            className="text-lg text-muted-foreground mt-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-base text-gray-600 mt-6 max-w-3xl mx-auto leading-relaxed text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            단순한 숫자 분석을 넘어 고객의 진짜 목소리를 찾고, 이를 비즈니스 성장으로 연결하는 일에 집중합니다. 
-            실제 이커머스 창업 경험을 통해 발견한 문제들을 기술적으로 해결하며, 
-            <strong className="text-primary"> 데이터가 전하는 진짜 이야기를 논리적으로 해석</strong>합니다.
+            한국방송통신대학교 AI학과에서 통계학과 머신러닝을 학습하고 있으며, 
+            부트캠프에서 실무 프로젝트 경험을 쌓았습니다. 
+            <strong className="text-blue-600">온라인 데이터 분석과 감성분석</strong>을 통해 
+            시민들의 의견을 정량화하고 정책 수립에 도움이 되는 인사이트를 제공하고 싶습니다.
           </motion.p>
         </motion.div>
 
@@ -306,12 +342,126 @@ export function AboutSection() {
           </div>
         </motion.div>
 
+        {/* Timeline Section - Career & Education */}
+        <motion.div
+          className="mb-24"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 1.5, duration: 0.8 }}
+        >
+          <h3 className="text-3xl font-bold text-center mb-12">
+            <span className="gradient-text">경력 및 교육</span>
+            <span className="text-muted-foreground"> (Timeline)</span>
+          </h3>
+          
+          <div className="relative max-w-4xl mx-auto">
+            {/* Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20" />
+            
+            {timeline.map((item, index) => (
+              <motion.div
+                key={index}
+                className={`relative flex items-center mb-12 ${
+                  index % 2 === 0 ? 'flex-row-reverse' : ''
+                }`}
+                initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ delay: 1.6 + index * 0.1, duration: 0.6 }}
+              >
+                {/* Content Card */}
+                <motion.div
+                  className={`w-5/12 ${
+                    index % 2 === 0 ? 'text-right pr-8' : 'pl-8'
+                  }`}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <Card className="data-card hover:shadow-xl transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className={`flex items-center gap-2 mb-2 ${
+                        index % 2 === 0 ? 'justify-end' : ''
+                      }`}>
+                        {item.type === 'work' ? (
+                          <Briefcase className="w-4 h-4 text-blue-500" />
+                        ) : (
+                          <GraduationCap className="w-4 h-4 text-purple-500" />
+                        )}
+                        <span className="text-sm text-muted-foreground">{item.date}</span>
+                      </div>
+                      <h4 className="font-bold text-lg mb-1">{item.title}</h4>
+                      <p className="text-primary font-medium mb-2">{item.company}</p>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+                
+                {/* Timeline Node */}
+                <motion.div
+                  className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"
+                  whileHover={{ scale: 1.5 }}
+                />
+                
+                {/* Empty Space */}
+                <div className="w-5/12" />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Certifications Section */}
+        <motion.div
+          className="mb-24"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 1.8, duration: 0.8 }}
+        >
+          <h3 className="text-3xl font-bold text-center mb-12">
+            <span className="gradient-text">자격증 및 수상</span>
+          </h3>
+          
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={cert.name}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 1.9 + index * 0.1, duration: 0.6 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Card className="data-card hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6 text-center">
+                    <BookOpen className="w-12 h-12 mx-auto mb-4 text-yellow-500" />
+                    <h4 className="font-bold text-lg mb-2">{cert.name}</h4>
+                    <p className="text-sm text-muted-foreground mb-1">{cert.issuer}</p>
+                    <p className="text-xs text-primary">{cert.date}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Resume Download Button */}
+        <motion.div
+          className="text-center mb-24"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 2.0, duration: 0.6 }}
+        >
+          <Button
+            size="lg"
+            className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+          >
+            <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+            이력서 PDF 다운로드
+          </Button>
+        </motion.div>
+
         {/* Personal Statement */}
         <motion.div
           className="mt-20"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 1.9, duration: 0.8 }}
+          transition={{ delay: 2.1, duration: 0.8 }}
         >
           <Card className="glass-effect border-2 border-primary/20 hover:border-primary/40 transition-colors relative overflow-hidden">
             {/* Animated Border */}

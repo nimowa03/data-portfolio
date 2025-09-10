@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import { ThemeToggle } from '@/components/ui/theme-toggle'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,17 +17,17 @@ export function Header() {
   }, [])
 
   const navItems = [
-    { href: '#about', label: 'About Me' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#tech-stack', label: 'Tech Stack' },
-    { href: '#contact', label: 'Contact' }
+    { href: '#hero', label: '소개' },
+    { href: '#experience', label: '프로젝트' },
+    { href: '#skills', label: '스킬' },
+    { href: '#contact', label: '연락' }
   ]
 
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled 
-          ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm' 
+          ? 'bg-white/90 backdrop-blur-md shadow-sm' 
           : 'bg-transparent'
       }`}
       initial={{ opacity: 0, y: -100 }}
@@ -40,7 +39,7 @@ export function Header() {
           {/* Logo */}
           <motion.a
             href="#about"
-            className="text-xl font-bold text-slate-900 dark:text-slate-100"
+            className="text-xl font-bold text-gray-900"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -53,7 +52,7 @@ export function Header() {
               <motion.a
                 key={item.href}
                 href={item.href}
-                className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 font-medium transition-colors"
+                className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.3 }}
@@ -63,15 +62,13 @@ export function Header() {
               </motion.a>
             ))}
             
-            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
-            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100"
+              className="p-2 text-slate-600 hover:text-slate-900"
             >
               <motion.div
                 animate={{ rotate: isOpen ? 180 : 0 }}
@@ -93,12 +90,12 @@ export function Header() {
           }}
           transition={{ duration: 0.3 }}
         >
-          <div className="py-4 space-y-4 border-t border-slate-200 dark:border-slate-700">
+          <div className="py-4 space-y-4 border-t border-slate-200">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg font-medium transition-colors"
+                className="block px-4 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium transition-colors"
                 onClick={() => setIsOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}

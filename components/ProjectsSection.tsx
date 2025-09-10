@@ -97,7 +97,7 @@ export function ProjectsSection() {
   }
 
   return (
-    <section id="projects" className="section-padding bg-slate-50 dark:bg-slate-900">
+    <section id="projects" className="section-padding bg-blue-50">
       <div className="max-w-6xl mx-auto container-padding">
         <motion.div
           initial="hidden"
@@ -113,7 +113,7 @@ export function ProjectsSection() {
             <motion.h2 variants={itemVariants} className="text-4xl font-bold text-gradient mb-4">
               실전 프로젝트
             </motion.h2>
-            <motion.p variants={itemVariants} className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <motion.p variants={itemVariants} className="text-lg text-slate-600 max-w-2xl mx-auto">
               실제 비즈니스 문제를 데이터로 해결한 End-to-End 프로젝트들
             </motion.p>
           </div>
@@ -138,40 +138,40 @@ export function ProjectsSection() {
                           {/* Header - 더 미니멀하게 */}
                           <div>
                             <div className="flex items-center gap-2 mb-2">
-                              <div className="w-2 h-2 rounded-full bg-slate-900 dark:bg-slate-100"></div>
-                              <span className="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wide">
+                              <div className="w-2 h-2 rounded-full bg-slate-900"></div>
+                              <span className="text-sm text-slate-500 uppercase tracking-wide">
                                 {project.id === 1 ? 'Commerce' : 'Fintech'}
                               </span>
                             </div>
-                            <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+                            <h3 className="text-2xl font-bold text-slate-900 mb-2">
                               {project.title}
                             </h3>
-                            <p className="text-slate-600 dark:text-slate-400">{project.subtitle}</p>
+                            <p className="text-slate-600">{project.subtitle}</p>
                           </div>
 
                         {/* Description */}
-                        <blockquote className="text-lg italic text-slate-700 dark:text-slate-300 border-l-4 border-slate-300 dark:border-slate-600 pl-4">
+                        <blockquote className="text-lg italic text-slate-700 border-l-4 border-blue-300 pl-4">
                           {project.description}
                         </blockquote>
 
                         {/* Problem & Solution */}
                         <div className="space-y-4">
                           <div>
-                            <h4 className="font-semibold text-red-600 dark:text-red-400 mb-2">🔥 문제</h4>
-                            <p className="text-slate-600 dark:text-slate-400">{project.problem}</p>
+                            <h4 className="font-semibold text-red-600 mb-2">🔥 문제</h4>
+                            <p className="text-slate-600">{project.problem}</p>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-green-600 dark:text-green-400 mb-2">✅ 해결책</h4>
-                            <p className="text-slate-600 dark:text-slate-400">{project.solution}</p>
+                            <h4 className="font-semibold text-green-600 mb-2">✅ 해결책</h4>
+                            <p className="text-slate-600">{project.solution}</p>
                           </div>
                         </div>
 
                         {/* Metrics */}
                         <div className="grid grid-cols-3 gap-4">
                           {Object.entries(project.metrics).map(([key, value]) => (
-                            <div key={key} className="text-center p-3 bg-white dark:bg-slate-700 rounded-lg">
-                              <div className="text-xl font-bold text-slate-900 dark:text-slate-100">{value}</div>
-                              <div className="text-xs text-slate-500 dark:text-slate-400 capitalize">
+                            <div key={key} className="text-center p-3 bg-white rounded-lg border">
+                              <div className="text-xl font-bold text-slate-900">{value}</div>
+                              <div className="text-xs text-slate-500 capitalize">
                                 {key === 'reviews' && '리뷰 분석'}
                                 {key === 'categories' && '분석 카테고리'}
                                 {key === 'timeReduction' && '시간 단축'}
@@ -189,7 +189,7 @@ export function ProjectsSection() {
                             {project.techStack.map((tech) => (
                               <span
                                 key={tech}
-                                className="px-3 py-1 text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 rounded-full"
+                                className="px-3 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-full"
                               >
                                 #{tech}
                               </span>
@@ -203,10 +203,10 @@ export function ProjectsSection() {
                               href={project.github}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center text-slate-900 dark:text-slate-100 hover:text-slate-600 dark:hover:text-slate-400 transition-colors group"
+                              className="inline-flex items-center text-slate-900 hover:text-blue-600 transition-colors group"
                             >
                               <Github className="w-4 h-4 mr-2" />
-                              <span className="border-b border-transparent group-hover:border-slate-900 dark:group-hover:border-slate-100 transition-colors">
+                              <span className="border-b border-transparent group-hover:border-blue-600 transition-colors">
                                 GitHub에서 보기
                               </span>
                               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -226,8 +226,8 @@ export function ProjectsSection() {
                               onClick={() => setActiveImageIndex(prev => ({...prev, [project.id]: imgIndex}))}
                               className={`px-3 py-1 text-xs rounded-full transition-colors ${
                                 (activeImageIndex[project.id] || 0) === imgIndex
-                                  ? 'bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900'
-                                  : 'bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-400 hover:bg-slate-300 dark:hover:bg-slate-600'
+                                  ? 'bg-blue-600 text-white'
+                                  : 'bg-slate-200 text-slate-600 hover:bg-slate-300'
                               }`}
                             >
                               {img.title}
@@ -236,7 +236,7 @@ export function ProjectsSection() {
                         </div>
                         
                         {/* Main Image */}
-                        <div className="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700">
+                        <div className="aspect-[4/3] bg-slate-50 rounded-lg overflow-hidden border border-slate-200">
                           <img
                             src={project.images?.[activeImageIndex[project.id] || 0]?.src || '/voc_overview.png'}
                             alt={`${project.title} - ${project.images?.[activeImageIndex[project.id] || 0]?.title}`}
@@ -245,11 +245,11 @@ export function ProjectsSection() {
                         </div>
                         
                         {/* Business Insights */}
-                        <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                          <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3 text-sm">핵심 인사이트</h4>
+                        <div className="p-4 bg-blue-50 rounded-lg">
+                          <h4 className="font-semibold text-slate-900 mb-3 text-sm">핵심 인사이트</h4>
                           <div className="space-y-2">
                             {project.insights.map((insight, idx) => (
-                              <div key={idx} className="text-sm text-slate-600 dark:text-slate-400 flex items-start">
+                              <div key={idx} className="text-sm text-slate-600 flex items-start">
                                 <span className="text-slate-400 mr-2">•</span>
                                 <span>{insight}</span>
                               </div>

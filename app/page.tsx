@@ -1,21 +1,22 @@
 'use client'
 
-import { AboutSection } from '@/components/AboutSection'
-import { ProjectsSection } from '@/components/ProjectsSection'
-import { TechStackSection } from '@/components/TechStackSection'
+import { HeroSection } from '@/components/HeroSection'
+import { ExperienceSection } from '@/components/ExperienceSection'
+import { SkillsSection } from '@/components/SkillsSection'
 import { ContactSection } from '@/components/ContactSection'
 import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
+    <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <section id="about">
-          <AboutSection />
+        <section id="hero">
+          <HeroSection />
         </section>
-        <section id="projects">
-          <ProjectsSection />
+        <section id="experience">
+          <ExperienceSection />
         </section>
         <section id="skills">
           <SkillsSection />
@@ -24,6 +25,7 @@ export default function Home() {
           <ContactSection />
         </section>
       </main>
+      <Footer />
     </div>
   )
 }
