@@ -117,20 +117,38 @@ export function HeroSection() {
             {/* CTA Buttons */}
             <motion.div 
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-wrap gap-3 justify-center lg:justify-start"
             >
               <button 
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                className="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 font-medium text-sm shadow-md hover:shadow-lg"
                 onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                프로젝트 보기
+                ✨ 프로젝트 보기
               </button>
               
+              <a
+                href="https://github.com/nimowa03/data-portfolio/blob/main/README.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 bg-white border border-blue-200 text-blue-700 rounded-lg hover:bg-blue-50 hover:border-blue-300 transition-all duration-200 font-medium text-sm shadow-sm hover:shadow-md text-center"
+              >
+                📋 GitHub Portfolio
+              </a>
+
+              <a
+                href="https://github.com/nimowa03/data-portfolio/blob/main/resume.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 bg-white border border-emerald-200 text-emerald-700 rounded-lg hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-200 font-medium text-sm shadow-sm hover:shadow-md text-center"
+              >
+                📄 Resume & CV
+              </a>
+              
               <button 
-                className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
+                className="px-5 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 hover:border-slate-300 transition-all duration-200 font-medium text-sm shadow-sm hover:shadow-md"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                연락하기
+                💬 Contact
               </button>
             </motion.div>
           </div>
