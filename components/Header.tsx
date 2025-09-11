@@ -20,6 +20,7 @@ export function Header() {
     { href: '#hero', label: '소개' },
     { href: '#experience', label: '프로젝트' },
     { href: '#skills', label: '스킬' },
+    { href: '#roadmap', label: '성장계획' },
     { href: '#contact', label: '연락' }
   ]
 

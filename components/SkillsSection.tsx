@@ -13,7 +13,7 @@ export function SkillsSection() {
     { name: 'SQL', level: 80, icon: '🗄️', description: 'PostgreSQL, MariaDB' },
     { name: 'Machine Learning', level: 75, icon: '🤖', description: 'scikit-learn, 추천시스템' },
     { name: 'Data Visualization', level: 75, icon: '📊', description: 'Streamlit, Plotly, matplotlib' },
-    { name: 'FastAPI', level: 70, icon: '🌐', description: 'REST API, 백엔드 개발' },
+    { name: 'AWS', level: 70, icon: '☁️', description: 'EC2, RDS, Lambda' },
     { name: 'Docker', level: 70, icon: '🐳', description: 'Container, 인프라 구축' }
   ]
 

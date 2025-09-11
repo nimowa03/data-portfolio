@@ -37,7 +37,7 @@ export function ExperienceSection() {
       description: "감정적 거래를 배제한 데이터 기반 24/7 자동매매 시스템 구축",
       problem: "개인 투자자 90%가 손실을 보는 이유: 감정적 거래, 타이밍 부재, 일관성 부족",
       solution: "호가 단위 보정, UUID 기반 추적, 3단계 안전장치를 갖춘 자동화 시스템 구축",
-      result: "18개월 **백테스팅**으로 검증: 승률 68.4%, 최대 낙폭 -12.5% (시장 대비 50% 개선). 실제 소액 운영으로 시스템 안정성 확인",
+      result: "18개월 백테스팅으로 검증: 승률 68.4%, 최대 낙폭 -12.5% (시장 대비 50% 개선) \n실제 소액 운영으로 시스템 안정성 확인",
       techStack: ["Python", "APScheduler", "MariaDB", "Upbit API", "Docker"],
       metrics: {
         "총 거래": "1,247회",
@@ -56,7 +56,7 @@ export function ExperienceSection() {
       problem: "사회초년생이 겪는 '어떤 차를 어떻게 살까?' 고민과 16~24% 고금리 대출 문제",
       solution: "라이프스타일 분석 기반 차량 추천 AI 모델 + 금융 매칭 시스템으로 정보 비대칭 해결",
       result: "팀 리더로서 프로젝트 총괄, Docker 인프라 구축 및 scikit-learn 기반 추천 모델 개발",
-      techStack: ["FastAPI", "PostgreSQL", "Docker", "scikit-learn", "pandas"],
+      techStack: ["React", "FastAPI", "PostgreSQL", "Docker", "scikit-learn", "pandas"],
       metrics: {
         "팀원": "4명",
         "기간": "진행중",
@@ -177,7 +177,14 @@ export function ExperienceSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-blue-600 mb-2 text-sm">📈 결과</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">{selectedData.result}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {selectedData.result.split('\n').map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        {index < selectedData.result.split('\n').length - 1 && <br />}
+                      </span>
+                    ))}
+                  </p>
                 </div>
               </div>
             </div>

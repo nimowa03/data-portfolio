@@ -3,6 +3,7 @@
 import { HeroSection } from '@/components/HeroSection'
 import { ExperienceSection } from '@/components/ExperienceSection'
 import { SkillsSection } from '@/components/SkillsSection'
+import { GrowthRoadmapSection } from '@/components/GrowthRoadmapSection'
 import { ContactSection } from '@/components/ContactSection'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
@@ -20,6 +21,9 @@ export default function Home() {
         </section>
         <section id="skills">
           <SkillsSection />
+        </section>
+        <section id="roadmap">
+          <GrowthRoadmapSection />
         </section>
         <section id="contact">
           <ContactSection />

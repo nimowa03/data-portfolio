@@ -104,7 +104,7 @@ export function HeroSection() {
               variants={itemVariants}
               className="flex flex-wrap gap-3"
             >
-              {['Python', 'SQL', '머신러닝', 'LLM/RAG', '감성분석', 'Streamlit'].map((skill, index) => (
+              {['Python', 'SQL', '머신러닝', 'LLM/RAG', '감성분석', 'Vibe Coding'].map((skill, index) => (
                 <span
                   key={skill}
                   className="px-3 py-1 bg-white text-blue-700 rounded-lg border border-blue-200 text-sm font-medium"
