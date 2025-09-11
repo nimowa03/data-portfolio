@@ -5,7 +5,7 @@
 
 <table>
 <tr>
-<td><img src="./docs/profile.jpg" width="120" style="border-radius: 10px;"></td>
+<td><img src="docs/profile.jpg" width="120" style="border-radius: 10px;"></td>
 <td>
 
 ## 인적사항
