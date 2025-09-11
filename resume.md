@@ -3,6 +3,11 @@
 
 ---
 
+<table>
+<tr>
+<td><img src="./docs/profile.jpg" width="120" style="border-radius: 10px;"></td>
+<td>
+
 ## 인적사항
 - 이름: **이창수**
 - 생년월일: **2003.12.03** (만 21세)
@@ -10,7 +15,11 @@
 - 연락처: **010-6248-7807**
 - 이메일: **nimowa03@gmail.com**
 - GitHub: **https://github.com/nimowa03**
-- 포트폴리오: **https://github.com/nimowa03/data-portfolio**
+- 포트폴리오: **https://data-portfolio-rkko.vercel.app/**
+
+</td>
+</tr>
+</table>
 
 ---
 

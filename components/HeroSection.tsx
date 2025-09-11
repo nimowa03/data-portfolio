@@ -153,18 +153,24 @@ export function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right Content - Simple Profile */}
+          {/* Right Content - Profile with Photo */}
           <motion.div 
             variants={itemVariants}
             className="relative flex justify-center"
           >
             <div className="w-80 h-80 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center">
               <div className="text-center">
-                <div className="w-24 h-24 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">이창수</span>
+                <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center border-4 border-white shadow-lg">
+                  <span className="text-white text-2xl font-bold">Data<br/>Driven</span>
                 </div>
-                <p className="text-blue-700 font-medium">데이터 분석가 지망생</p>
-                <p className="text-blue-600 text-sm mt-2">한국방송통신대 AI학과</p>
+                <h3 className="text-xl font-bold text-blue-800 mb-1">Data Driven</h3>
+                <p className="text-blue-700 font-medium mb-2">데이터 분석가 지망생</p>
+                <p className="text-blue-600 text-sm mb-3">한국방송통신대 AI학과</p>
+                <div className="flex justify-center gap-2">
+                  <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded-full">Analytics</span>
+                  <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded-full">AI/ML</span>
+                  <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded-full">Data</span>
+                </div>
               </div>
             </div>
           </motion.div>
