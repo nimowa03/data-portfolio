@@ -8,15 +8,18 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: '이창수 - 데이터 분석가 포트폴리오',
-  description: '데이터로 비즈니스를 구축하고 성장시키는 실전 분석가. VOC 분석 2,185건, 68.4% 거래 승률 달성.',
+  title: '이창수 - LLM 서비스 기획·개발자 포트폴리오',
+  description: 'LLM 기술로 비즈니스 아이디어를 실제 가치로 만드는 서비스 기획·개발자. OpenAI API, Gemini 2.5 Flash + A2A Protocol 경험.',
   keywords: [
-    '데이터 분석가',
-    '데이터 사이언티스트', 
-    '텍스트 마이닝',
-    'NLP',
-    '자연어처리',
-    'Python',
+    'LLM 서비스 기획',
+    'PoC 개발',
+    'AI 서비스 기획자',
+    'OpenAI API',
+    'Gemini 2.5 Flash',
+    'A2A Protocol',
+    'Chain-of-Thought',
+    'Prompt Engineering',
+    'Vibe Coding',
     '포트폴리오'
   ],
   authors: [{ name: '이창수' }],
@@ -24,23 +27,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
-    url: 'https://nimowa03.github.io/data-portfolio/',
-    title: '이창수 - 데이터 분석가 포트폴리오',
-    description: '데이터로 비즈니스를 구축하고 성장시키는 실전 분석가',
+    url: 'https://data-portfolio-rkko.vercel.app/',
+    title: '이창수 - LLM 서비스 기획·개발자 포트폴리오',
+    description: 'LLM 기술로 비즈니스 아이디어를 실제 가치로 만드는 서비스 기획·개발자',
     siteName: '이창수 포트폴리오',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: '이창수 데이터 분석가 포트폴리오',
+        alt: '이창수 LLM 서비스 기획·개발자 포트폴리오',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '이창수 - 데이터 분석가 포트폴리오',
-    description: '데이터로 비즈니스를 구축하고 성장시키는 실전 분석가',
+    title: '이창수 - LLM 서비스 기획·개발자 포트폴리오',
+    description: 'LLM 기술로 비즈니스 아이디어를 실제 가치로 만드는 서비스 기획·개발자',
     images: ['/og-image.png'],
   },
   robots: {
