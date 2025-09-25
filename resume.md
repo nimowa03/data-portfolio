@@ -77,7 +77,7 @@
 
 ---
 
-## 자기소개서 (FinInsight LLM Service Planning & PoC Development 인턴십 맞춤)
+## 자기소개서 (LLM 서비스 기획·개발 직무 중심)
 
 - ✓ **LLM 서비스 기획 경험**: 이커머스 운영에서 발견한 실제 비즈니스 문제를 OpenAI API와 프롬프트 엔지니어링으로 해결하는 LLM 서비스를 직접 기획·구축했습니다.
 - ✓ **PoC 개발 역량**: Gemini 2.5 Flash + A2A Protocol을 활용한 3-Agent 협업 시스템을 PM으로 설계하고, 아이디어를 실제 작동하는 LLM 서비스로 구현하는 역량을 갖췄습니다.
