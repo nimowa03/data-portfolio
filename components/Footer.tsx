@@ -78,7 +78,7 @@ export function Footer() {
             transition={{ delay: 0.5 }}
           >
             <p className="flex items-center justify-center gap-1 text-sm">
-              © {currentYear} 이창수 • 데이터 분석 인턴십 지원자 • Made with 
+              © {currentYear} 이창수 • LLM 서비스 기획·개발 인턴십 지원자 • Made with
               <Heart className="w-4 h-4 text-red-500 fill-current" />
             </p>
           </motion.div>

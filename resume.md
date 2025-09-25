@@ -1,5 +1,5 @@
-> ## 데이터로 비즈니스 문제를 해결하고, AI 기술을 활용해 실질적인 가치를 창출하는 데이터 분석가
-> 희망 직무: **데이터 분석가 · AI 엔지니어 · 데이터 사이언티스트**
+> ## LLM 기술로 비즈니스 아이디어를 실제 가치로 만드는 LLM 서비스 기획·개발자
+> 희망 직무: **LLM 서비스 기획 · PoC 개발 · AI 서비스 기획자**
 
 ---
 
@@ -24,35 +24,40 @@
 ---
 
 ## 핵심 역량 (Highlights)
-- **도메인-우선 문제정의**: 리뷰 문맥, 호가·레이트리밋 등 **현실 제약**을 먼저 모델링
-- **End-to-End 구현**: 수집 → 전처리/LLM 분석 → 대시보드/자동화 파이프라인
-- **운영 안정성**: 스키마/로그/UUID 추적, Docker/.env/CI로 **재현성** 확보
-- **데이터 기반 의사결정 지원**: 분석 결과를 실행 가능한 인사이트로 전환하여, 비즈니스의 데이터 기반 의사결정을 지원
-- **비즈니스 커뮤니케이션**: 인사이트를 **우선순위·KPI·실행 티켓**으로 전환
+- **LLM 서비스 기획**: 비즈니스 요구사항을 LLM 기반 솔루션으로 설계하고 프롬프트 엔지니어링으로 최적화
+- **PoC 개발**: OpenAI API, LangChain을 활용한 RAG/파인튜닝 적용 및 MVP 서비스 구축
+- **AI 에이전트 협업**: Gemini 2.5 Flash + A2A Protocol 멀티에이전트 시스템 설계 및 구현
+- **Vibe Coding**: Claude Code, Gemini CLI를 활용한 빠른 프로토타이핑 및 개발 효율성 극대화
+- **비즈니스 중심 LLM 활용**: 실무 문제를 LLM으로 해결하여 실제 가치를 창출하는 서비스 개발
 
 ---
 
 ## 기술 스택
-- 언어/분석: **Python, SQL, (R 기본), 통계/가설검정, EDA**
-- AI/LLM: **OpenAI API, LangChain**(감성/키워드/주제 추출)
-- 데이터: **PostgreSQL, MariaDB, Pandas, NumPy**
-- 앱/시각화: **Streamlit, Plotly/Matplotlib** (Tableau 기본)
-- 운영: **Docker, docker-compose, Git/GitHub**
+- **LLM/AI**: OpenAI API (GPT-4o), Gemini 2.5 Flash, LangChain, Prompt Engineering, Chain-of-Thought
+- **개발/프로토타이핑**: Python, Pydantic, FastAPI, Vibe Coding (Claude Code, Gemini CLI)
+- **멀티에이전트**: A2A Protocol, 에이전트간 통신 프로토콜, 협업 플로우 설계
+- **데이터/인프라**: PostgreSQL, MariaDB, Docker, Next.js, React, Tailwind CSS
+- **서비스 개발**: Streamlit, 실시간 데이터 처리, API 최적화, 비용 효율성
 
 ---
 
 ## 프로젝트
 
-### 🛒 VOC Analyzer — 고객의 소리(리뷰) 분석 대시보드
-- **성과:** 2,185건의 리뷰를 7개 카테고리로 자동 분석, 의사결정 시간을 80% 단축하고 기획/CS팀이 즉시 실행 가능한 개선점 도출.
-- **기술:** Python, SQL(PostgreSQL), OpenAI, LangChain, Streamlit, Docker
+### 🛒 VOC Analyzer — LLM 기반 고객 인사이트 플랫폼
+- **성과:** OpenAI GPT-4o + Chain-of-Thought 프롬프트로 2,185건 리뷰를 7개 핵심 지표로 정량화, API 비용 80% 절감 및 99% 파싱 성공률 달성
+- **기술:** OpenAI GPT-4o, LangChain, Pydantic, Chain-of-Thought, Python, PostgreSQL, Streamlit
 - **상세 내용:** [포트폴리오 본문 확인](./README.md#project-1--voc-analyzer--커머스-고객-인사이트-플랫폼)
+
+### 🚗 CarFin AI — Gemini 2.5 Flash + A2A 차량 컨시어지 서비스
+- **성과:** PM으로서 Gemini 2.5 Flash + A2A Protocol 3-Agent 협업 시스템 설계, 117,129건 실시간 데이터 연동 성공
+- **기술:** Gemini 2.5 Flash, A2A Protocol, Next.js 15, React 19, PostgreSQL, 멀티에이전트 협업 플로우
+- **상세 내용:** [GitHub 코드](https://github.com/SeSAC-DA1/CarFin_AI.git)
 
 ---
 
-### 💹 CoinTradeSystem — 실시간 자동매매 파이프라인
-- **성과:** 24/7 자동 거래 시스템을 통해 감정적 매매를 배제하고, 3단계 리스크 관리 및 UUID 기반 추적 시스템으로 안정성과 데이터 정합성 확보.
-- **기술:** Python, APScheduler, MariaDB, Streamlit, Docker, Upbit API
+### 💹 CoinTradeSystem — 핀테크 자동거래 (LLM 통합 예정)
+- **성과:** 현재 68.4% 승률 달성, 향후 GPT-4 뉴스 감성분석과 시장 예측 모델을 통합한 차세대 AI 거래 시스템으로 발전 계획
+- **기술:** Python, APScheduler, MariaDB, Upbit API, GPT-4 (예정), LangChain (예정)
 - **상세 내용:** [포트폴리오 본문 확인](./README.md#project-2--cointradesystem--핀테크-자동-거래-시스템)
 
 ---
@@ -72,15 +77,15 @@
 
 ---
 
-## 자기소개서 (스타트업 맞춤 버전)
+## 자기소개서 (FinInsight LLM Service Planning & PoC Development 인턴십 맞춤)
 
-- ✓ **경험 기반 문제 해결**: 이커머스 운영 경험에서 발견한 실제 문제(VOC)를 해결하기 위해 직접 분석 시스템을 구축했습니다.
-- ✓ **End-to-End 구현 역량**: LLM, Pydantic, Docker 등을 활용하여 아이디어를 실제 작동하는 프로덕트로 만드는 역량을 갖췄습니다.
-- ✓ **비즈니스 중심의 분석**: 데이터 분석 결과를 실행 가능한 '인사이트'로 전환하고, 비즈니스적 감각을 바탕으로 제품 개선에 기여하는 데 자신이 있습니다.
+- ✓ **LLM 서비스 기획 경험**: 이커머스 운영에서 발견한 실제 비즈니스 문제를 OpenAI API와 프롬프트 엔지니어링으로 해결하는 LLM 서비스를 직접 기획·구축했습니다.
+- ✓ **PoC 개발 역량**: Gemini 2.5 Flash + A2A Protocol을 활용한 3-Agent 협업 시스템을 PM으로 설계하고, 아이디어를 실제 작동하는 LLM 서비스로 구현하는 역량을 갖췄습니다.
+- ✓ **Vibe Coding & 빠른 프로토타이핑**: Claude Code, Gemini CLI를 활용하여 개발 효율성을 극대화하고, LLM 기반 솔루션을 빠르게 MVP로 구현하여 실제 가치를 창출하는 데 자신이 있습니다.
 
 ---
 
-저는 **문제를 발견하고 데이터를 통해 빠르게 해결책을 만들어내는 데이터 분석가**입니다.  
+저는 **LLM 기술로 비즈니스 아이디어를 실제 가치로 만드는 LLM 서비스 기획·개발자**입니다.  
 직접 이커머스 쇼핑몰을 운영하며 고객 피드백을 관리하는 과정에서, 리뷰 한 줄에도 서비스 개선과 매출 향상의 단서가 숨어 있음을 깨달았습니다. 이 경험은 제가 데이터를 단순히 다루는 것이 아니라, **비즈니스 성장을 이끄는 무기**로 활용할 수 있다는 확신을 준 출발점이었습니다.
 
 이후 AI학과에서 통계·Python·R을 학습하고, 다양한 사이드 프로젝트로 문제 해결 역량을 다졌습니다. 특히 **VOC Analyzer**에서는 마켓컬리 리뷰를 크롤링해 감성 분석·키워드 추출을 수행하고, Streamlit 대시보드로 시각화하여 **"별점만으로는 알 수 없는 고객의 진짜 목소리"**를 인사이트로 전환했습니다. 결과적으로 **고객 경험 개선과 제품 전략 수립에 바로 쓰이는 MVP**를 만들었습니다.

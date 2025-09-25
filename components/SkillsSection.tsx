@@ -9,12 +9,12 @@ export function SkillsSection() {
   const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   const skills = [
-    { name: 'Python', level: 85, icon: '🐍', description: 'pandas, NumPy, scikit-learn' },
-    { name: 'SQL', level: 80, icon: '🗄️', description: 'PostgreSQL, MariaDB' },
-    { name: 'Machine Learning', level: 75, icon: '🤖', description: 'scikit-learn, 추천시스템' },
-    { name: 'Data Visualization', level: 75, icon: '📊', description: 'Streamlit, Plotly, matplotlib' },
-    { name: 'AWS', level: 70, icon: '☁️', description: 'EC2, RDS, Lambda' },
-    { name: 'Docker', level: 70, icon: '🐳', description: 'Container, 인프라 구축' }
+    { name: 'OpenAI API', level: 85, icon: '🤖', description: 'GPT-4, 프롬프트 엔지니어링' },
+    { name: 'LangChain', level: 80, icon: '🔗', description: 'RAG, 체인 구축' },
+    { name: 'Python', level: 85, icon: '🐍', description: 'Pydantic, FastAPI' },
+    { name: 'Hugging Face', level: 75, icon: '🤗', description: 'Transformers, 파인튜닝' },
+    { name: 'Vibe Coding', level: 80, icon: '⚡', description: 'Claude Code, Gemini CLI' },
+    { name: 'Prompt Engineering', level: 85, icon: '📝', description: 'Chain-of-Thought, 최적화' }
   ]
 
   const achievements = [
@@ -36,10 +36,10 @@ export function SkillsSection() {
             스킬 & 자격
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            보유 기술 및 자격증
+            LLM 서비스 개발 기술 스택
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            데이터 분석 업무에 필요한 핵심 기술들을 학습하고 실전에 적용해보았습니다
+            LLM 기반 서비스 기획·개발에 필요한 핵심 기술들을 학습하고 실전 프로젝트에 적용했습니다
           </p>
         </motion.div>
 
@@ -129,10 +129,10 @@ export function SkillsSection() {
                 현재 학습 중
               </h3>
               <div className="space-y-2 text-sm">
-                <div>• 딥러닝 및 고급 머신러닝</div>
-                <div>• 공공데이터 분석 방법론</div>
-                <div>• 팀 리더십 및 프로젝트 관리</div>
-                <div>• 정책 데이터 수집 및 처리</div>
+                <div>• 머신러닝 및 딥러닝 이론</div>
+                <div>• 통계학 및 확률론</div>
+                <div>• LLM 기반 서비스 설계 방법론</div>
+                <div>• AI 프로덕트 기획 및 개발 프로세스</div>
               </div>
             </div>
           </motion.div>

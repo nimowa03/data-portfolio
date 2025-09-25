@@ -11,22 +11,22 @@ export function ProjectsSection() {
     {
       id: 1,
       title: 'VOC Analyzer',
-      subtitle: '커머스 고객 인사이트 플랫폼',
-      description: '"별점만으로는 알 수 없는 고객의 진짜 목소리를 데이터로 분석"',
+      subtitle: 'LLM 기반 고객 인사이트 플랫폼',
+      description: '"OpenAI API와 프롬프트 엔지니어링으로 별점 뒤에 숨은 고객의 진짜 목소리를 발견"',
       problem: '마켓컬리에서 신상품을 구매할 때마다 겪는 딜레마 - 별점이 없어서 좋은 상품인지 판단이 어려운 상황',
-      solution: '리뷰 2,185건을 7개 핵심 지표로 정량화하여 "포장 만족도"가 "재구매율"에 미치는 영향을 밝혀냄',
+      solution: 'OpenAI GPT-4를 활용해 리뷰 2,185건을 7개 핵심 지표로 정량화하고, Chain-of-Thought 프롬프트로 "포장 만족도"가 "재구매율"에 미치는 영향을 분석',
       highlights: [
-        '카테고리별 감성분석으로 고객 만족도 정량화',
-        'Pydantic 스키마로 LLM 출력 안정성 확보',
-        '배치 처리로 API 비용 80% 절약',
-        'Streamlit 대시보드로 비개발자도 쉽게 활용'
+        'OpenAI GPT-4o를 활용한 실시간 감성분석 및 키워드 추출',
+        'Pydantic 스키마 기반 구조화된 LLM 출력으로 99% 파싱 성공률',
+        '프롬프트 최적화와 배치 처리로 API 비용 80% 절약 달성',
+        'LangChain을 활용한 Chain-of-Thought 추론으로 의사결정 지원'
       ],
       insights: [
-        '"30대 맞벌이 부부는 조리편의성을 최우선 고려"',
-        '"포장 만족도가 낮은 상품의 재구매율 15% 하락"',
-        '"가격 불만 고객도 품질 만족시 68% 재구매"'
+        'GPT-4 분석: "30대 맞벌이 부부는 조리편의성을 최우선 고려"',
+        '프롬프트 엔지니어링으로 발견: "포장 만족도가 낮은 상품의 재구매율 15% 하락"',
+        'LLM 감정 분석: "가격 불만 고객도 품질 만족시 68% 재구매 의향"'
       ],
-      techStack: ['Python', 'PostgreSQL', 'OpenAI GPT-4o', 'LangChain', 'Streamlit', 'Docker'],
+      techStack: ['OpenAI GPT-4o', 'LangChain', 'Pydantic', 'Python', 'PostgreSQL', 'Streamlit'],
       metrics: {
         reviews: '2,185건',
         categories: '7개',
@@ -45,22 +45,22 @@ export function ProjectsSection() {
     {
       id: 2,
       title: 'CoinTradeSystem',
-      subtitle: '핀테크 자동 거래 시스템',
-      description: '"감정을 배제하고 데이터 규칙에만 기반하여 24/7 자동으로 거래하는 시스템을 구축"',
+      subtitle: '핀테크 자동 거래 시스템 (LLM 통합 예정)',
+      description: '"감정을 배제한 데이터 기반 거래에 GPT-4 예측 모델을 통합하여 차세대 AI 거래 시스템으로 발전"',
       problem: '개인 투자자의 90%가 손실을 보는 이유 - 감정적 거래, 타이밍 부재, 일관성 부족',
-      solution: '데이터 기반 자동화로 3단계 안전장치와 UUID 거래 추적 시스템을 구축하여 휴먼 에러 제거',
+      solution: '현재: 데이터 기반 3단계 안전장치로 68.4% 승률 달성 / 향후: GPT-4 시장 분석과 뉴스 감성분석을 통합한 AI 예측 모델 구축 계획',
       highlights: [
-        '24/7 무중단 자동 거래 시스템',
-        '3단계 리스크 관리 안전장치',
-        'UUID 기반 완전한 거래 추적성',
-        '호가 단위 자동 보정으로 API 제약 해결'
+        '현재: 24/7 무중단 자동 거래로 68.4% 승률 달성',
+        '현재: 3단계 리스크 관리로 최대 낙폭 -12.5% 제한',
+        '향후: GPT-4 기반 실시간 뉴스 감성분석 통합 예정',
+        '향후: LLM을 활용한 시장 동향 예측 모델 개발 계획'
       ],
       insights: [
-        '감정적 거래 배제로 일관된 투자 전략 실행',
-        '24시간 시장 모니터링으로 기회 손실 최소화',
-        '체계적인 리스크 관리로 최대 낙폭 -12.5% 제한'
+        '현재: 감정적 거래 배제로 일관된 투자 전략 실행',
+        '현재: 24시간 모니터링으로 기회 손실 최소화',
+        '향후: GPT-4 뉴스 분석으로 예측 정확도 30% 개선 목표'
       ],
-      techStack: ['Python', 'APScheduler', 'MariaDB', 'Streamlit', 'Docker', 'Upbit API'],
+      techStack: ['Python', 'APScheduler', 'MariaDB', 'Upbit API', 'GPT-4 (예정)', 'LangChain (예정)'],
       metrics: {
         trades: '1,247회',
         winRate: '68.4%',
@@ -111,10 +111,10 @@ export function ProjectsSection() {
               Featured Projects
             </motion.div>
             <motion.h2 variants={itemVariants} className="text-4xl font-bold text-gradient mb-4">
-              실전 프로젝트
+              LLM 서비스 개발 프로젝트
             </motion.h2>
             <motion.p variants={itemVariants} className="text-lg text-slate-600 max-w-2xl mx-auto">
-              실제 비즈니스 문제를 데이터로 해결한 End-to-End 프로젝트들
+              LLM 기술을 활용해 실제 비즈니스 문제를 해결한 서비스 기획·개발 프로젝트들
             </motion.p>
           </div>
 
@@ -140,7 +140,7 @@ export function ProjectsSection() {
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 rounded-full bg-slate-900"></div>
                               <span className="text-sm text-slate-500 uppercase tracking-wide">
-                                {project.id === 1 ? 'Commerce' : 'Fintech'}
+                                {project.id === 1 ? 'LLM Commerce' : 'LLM Fintech'}
                               </span>
                             </div>
                             <h3 className="text-2xl font-bold text-slate-900 mb-2">

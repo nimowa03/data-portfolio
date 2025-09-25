@@ -72,7 +72,7 @@ export function HeroSection() {
               variants={itemVariants}
               className="inline-flex items-center px-3 py-1 bg-blue-50 rounded-full text-sm font-medium text-blue-700 border border-blue-200"
             >
-              <span>데이터 분석가 지망생</span>
+              <span>LLM 서비스 개발자</span>
             </motion.div>
 
             <motion.h1 
@@ -82,21 +82,21 @@ export function HeroSection() {
               안녕하세요, <span className="text-blue-600">이창수</span>입니다
               <br />
               <span className="text-gray-700 text-2xl sm:text-3xl lg:text-4xl">
-                데이터에서 인사이트를, 인사이트에서 변화를
+                LLM으로 비즈니스 아이디어를,
+                <br />
+                아이디어를 실제 가치로
               </span>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="text-lg text-gray-600 leading-relaxed max-w-2xl"
             >
-              작은 이커머스를 운영하며 <strong className="text-blue-600">고객 리뷰의 소중함</strong>을 배웠습니다.
+              이커머스 운영 경험으로 <strong className="text-blue-600">고객 니즈의 중요성</strong>을 깨달았고,
               <br />
-              그 경험으로 <strong className="text-blue-600">LLM과 RAG</strong>를 활용한 감성분석과 자동화 시스템을 만들어 보았습니다.
+              <strong className="text-blue-600">AI 에이전트 협업 시스템</strong>을 PM으로 설계한 경험이 있습니다.
               <br />
-              데이터 분석은 제게 <strong className="text-blue-600">문제를 해결하는 언어</strong>입니다.
-              <br />
-              이제 그 언어로 공공의 가치를 만들어가고 싶습니다.
+              <strong className="text-blue-600">LLM 서비스 기획·개발 직무</strong>에서 실제로 쓰는 서비스를 만들고 싶습니다.
             </motion.p>
 
             {/* Key Skills */}
@@ -104,7 +104,7 @@ export function HeroSection() {
               variants={itemVariants}
               className="flex flex-wrap gap-3"
             >
-              {['Python', 'SQL', '머신러닝', 'LLM/RAG', '감성분석', 'Vibe Coding'].map((skill, index) => (
+              {['LLM 서비스 기획', 'AI 에이전트 협업', '서비스 PM', 'Gemini API', 'Vibe Coding (Claude Code, Gemini CLI)', '프롬프트 엔지니어링'].map((skill, index) => (
                 <span
                   key={skill}
                   className="px-3 py-1 bg-white text-blue-700 rounded-lg border border-blue-200 text-sm font-medium"
@@ -163,13 +163,13 @@ export function HeroSection() {
                 <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center border-4 border-white shadow-lg">
                   <span className="text-white text-2xl font-bold">Data<br/>Driven</span>
                 </div>
-                <h3 className="text-xl font-bold text-blue-800 mb-1">Data Driven</h3>
-                <p className="text-blue-700 font-medium mb-2">데이터 분석가 지망생</p>
+                <h3 className="text-xl font-bold text-blue-800 mb-1">LLM Service</h3>
+                <p className="text-blue-700 font-medium mb-2">LLM 서비스 개발자</p>
                 <p className="text-blue-600 text-sm mb-3">한국방송통신대 AI학과</p>
                 <div className="flex justify-center gap-2">
-                  <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded-full">Analytics</span>
-                  <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded-full">AI/ML</span>
-                  <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded-full">Data</span>
+                  <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded-full">LLM</span>
+                  <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded-full">API</span>
+                  <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded-full">Service</span>
                 </div>
               </div>
             </div>

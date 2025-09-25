@@ -12,73 +12,73 @@ export function ExperienceSection() {
 
   const projects = [
     {
-      title: "AI_review",
-      subtitle: "AI 기반 감정 분석 대시보드 프로젝트",
+      title: "VOC Analyzer",
+      subtitle: "LLM 기반 고객 인사이트 플랫폼",
       period: "2025.07 - 2025.08",
-      type: "개인 프로젝트",
-      description: "마켓컬리 리뷰 2,185건을 감성분석하여 고객 의견을 7개 카테고리로 정량화",
-      problem: "마켓컬리에서 신상품 구매 시 별점만으로는 좋은 상품인지 판단이 어려운 딜레마",
-      solution: "OpenAI API 활용해 리뷰 텍스트를 감성분석하고 맛/양/가격 등 7개 카테고리별로 만족도 정량화",
-      result: "의사결정 시간 80% 단축 예상 (3시간 → 30분 대시보드), 포장 만족도가 재구매율에 미치는 영향 발견",
-      techStack: ["Python", "OpenAI GPT-4o", "Streamlit", "PostgreSQL", "Docker"],
+      type: "LLM PoC 프로젝트",
+      description: "OpenAI API와 프롬프트 엔지니어링으로 마켓컬리 리뷰 2,185건을 7개 핵심 지표로 정량화하여 LLM 기반 서비스 구축",
+      problem: "기존 별점 기반 평가의 한계: 고객의 진짜 의견과 상품별 세부 만족도를 정량화할 수 없는 문제",
+      solution: "OpenAI GPT-4o + LangChain으로 Chain-of-Thought 프롬프트 설계, Pydantic 스키마로 구조화된 감성분석 및 키워드 추출",
+      result: "LLM 기반 서비스로 의사결정 시간 80% 단축, 프롬프트 최적화로 API 비용 80% 절약, 99% 파싱 성공률 달성",
+      techStack: ["OpenAI GPT-4o", "LangChain", "Pydantic", "Python", "Streamlit", "PostgreSQL"],
       metrics: {
-        "리뷰 분석": "2,185건",
-        "시간 단축": "80% 예상",
-        "카테고리": "7개"
+        "LLM 처리량": "2,185건",
+        "파싱 성공률": "99%",
+        "API 비용절약": "80%"
       },
       githubUrl: "https://github.com/nimowa03/AI_review",
       color: "from-blue-500 to-indigo-500"
     },
     {
       title: "CoinTradeSystem",
-      subtitle: "실시간 암호화폐 자동매매",
+      subtitle: "핀테크 자동거래 (LLM 통합 예정)",
       period: "2025.06 - 2025.07",
-      type: "개인 프로젝트",
-      description: "감정적 거래를 배제한 데이터 기반 24/7 자동매매 시스템 구축",
-      problem: "개인 투자자 90%가 손실을 보는 이유: 감정적 거래, 타이밍 부재, 일관성 부족",
-      solution: "호가 단위 보정, UUID 기반 추적, 3단계 안전장치를 갖춘 자동화 시스템 구축",
-      result: "18개월 백테스팅으로 검증: 승률 68.4%, 최대 낙폭 -12.5% (시장 대비 50% 개선) \n실제 소액 운영으로 시스템 안정성 확인",
-      techStack: ["Python", "APScheduler", "MariaDB", "Upbit API", "Docker"],
+      type: "핀테크 + LLM 계획",
+      description: "현재: 데이터 기반 68.4% 승률 달성 / 향후: GPT-4 뉴스 감성분석과 시장 예측 모델을 통합한 차세대 AI 거래 시스템으로 발전 계획",
+      problem: "기존 데이터 기반 거래의 한계: 뉴스/사건에 따른 시장 변동성 예측 불가, 감정적 시장 분위기 반영 부족",
+      solution: "현재 시스템에 GPT-4 뉴스 감성분석, LangChain 기반 실시간 시장 분위기 분석, 프롬프트 엔지니어링을 통한 예측 정확도 향상 전략 수립",
+      result: "현재: 승률 68.4% 달성 / 향후 목표: LLM 통합으로 예측 정확도 30% 개선, 뉴스 기반 리스크 관리 시스템 구축",
+      techStack: ["Python", "APScheduler", "MariaDB", "Upbit API", "GPT-4 (예정)", "LangChain (예정)"],
       metrics: {
-        "총 거래": "1,247회",
-        "승률": "68.4%",
-        "평균 수익률": "0.73%"
+        "현재 승률": "68.4%",
+        "목표 개선": "+30%",
+        "LLM 적용": "예정"
       },
       githubUrl: "https://github.com/nimowa03/CoinTradeSystem",
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "CarFin",
-      subtitle: "AI 차량 추천 및 금융 매칭 플랫폼",
+      title: "CarFin AI",
+      subtitle: "Gemini 2.5 Flash + A2A 차량 컨시어지 서비스",
       period: "2025.09 - 진행중",
-      type: "청년취업사관학교 새싹×FinInsight",
-      description: "사회초년생을 위한 차량 추천과 금융 상품을 통합한 원스톱 플랫폼 팀 프로젝트",
-      problem: "사회초년생이 겪는 '어떤 차를 어떻게 살까?' 고민과 16~24% 고금리 대출 문제",
-      solution: "라이프스타일 분석 기반 차량 추천 AI 모델 + 금융 매칭 시스템으로 정보 비대칭 해결",
-      result: "팀 리더로서 프로젝트 총괄, Docker 인프라 구축 및 scikit-learn 기반 추천 모델 개발",
-      techStack: ["React", "FastAPI", "PostgreSQL", "Docker", "scikit-learn", "pandas"],
+      type: "SeSAC DA1 파이널 + 핀테크 공모전",
+      description: "Gemini 2.5 Flash + A2A Protocol로 구현한 3-Agent 협업 시스템으로 '니 취향만 말해, 나머지는 내가 다 해줄게' 올인원 차량 컨시어지 서비스",
+      problem: "기존 차량 플랫폼의 한계: 사용자가 직접 비교/분석해야 하고, 숨은 니즈는 발굴하지 못하는 문제",
+      solution: "Gemini 2.5 Flash + A2A Protocol 기반 3-Agent 시스템: ①컨시어지 매니저 ②니즈분석 전문가 ③데이터분석 전문가가 협업하여 숨은 니즈 발굴 및 완벽한 개인 맞춤 분석",
+      result: "PM(서비스 기획·개발 총괄)으로서 Gemini 2.5 Flash + A2A 멀티에이전트 협업 플로우 설계, 3-Agent 시스템 아키텍처 구현, 117,129건 실시간 데이터 연동 성공",
+      techStack: ["Gemini 2.5 Flash", "A2A Protocol", "Next.js 15", "React 19", "PostgreSQL", "Tailwind CSS"],
       metrics: {
-        "팀원": "4명",
-        "기간": "진행중",
-        "역할": "팀리더 & ML개발"
+        "역할": "PM (기획·총괄)",
+        "시스템 설계": "3-Agent",
+        "데이터 연동": "117,129건"
       },
-      githubUrl: "https://github.com/SeSAC-DA1/backend",
+      githubUrl: "https://github.com/SeSAC-DA1/CarFin_AI.git",
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "E-commerce Business",
-      subtitle: "개인 이커머스 쇼핑몰 운영",
+      subtitle: "개인 이커머스 운영 (LLM 적용 예정)",
       period: "2023.01 - 현재",
       type: "개인 사업",
-      description: "쿠팡, 스마트스토어 등 오픈마켓에서 소규모 이커머스 쇼핑몰 운영",
-      problem: "상품 판매 패턴과 고객 행동 파악의 어려움, 어떤 상품이 언제 잘 팔리는지 예측 곤란",
-      solution: "매출 데이터를 분석하고 차트를 만들어 판매 패턴 파악, Google Analytics로 고객 행동 추적",
-      result: "계절별 판매 패턴 파악으로 재고 관리 개선, 데이터 분석의 실제 비즈니스 가치 체감",
-      techStack: ["쿠팡 마켓플레이스", "스마트스토어", "데이터 분석"],
+      description: "쿠팡, 스마트스토어 등 오픈마켓에서 소규모 이커머스 운영하며 실제 비즈니스 경험 획득, 향후 LLM 기반 VOC 분석 시스템 적용 계획",
+      problem: "상품 판매 패턴과 고객 행동 파악의 어려움, 고객 리뷰에서 구체적인 개선점 도출의 한계",
+      solution: "현재: 매출 데이터 분석 및 고객 행동 추적 / 향후: OpenAI API 활용한 고객 리뷰 감성분석으로 세부 만족도 정량화 계획",
+      result: "계절별 판매 패턴 파악으로 재고 관리 개선, 데이터 분석의 실제 비즈니스 가치 체감, 향후 LLM 기반 VOC 분석 적용 예정",
+      techStack: ["쿠팡 마켓플레이스", "스마트스토어", "데이터 분석", "OpenAI API (예정)"],
       metrics: {
         "운영 기간": "2년+",
         "플랫폼": "오픈마켓",
-        "학습 동기": "데이터 분석"
+        "LLM 적용": "계획 중"
       },
       githubUrl: null,
       color: "from-orange-500 to-red-500"
@@ -100,10 +100,10 @@ export function ExperienceSection() {
             프로젝트 경험
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            실전 프로젝트
+            LLM 서비스 기획·개발 프로젝트
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            실제 데이터를 다뤄본 경험과 학습 과정을 소개합니다
+            LLM 기술을 활용한 비즈니스 문제 해결과 서비스 기획·개발 경험
           </p>
         </motion.div>
 

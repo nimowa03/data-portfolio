@@ -89,7 +89,7 @@ export function ContactSection() {
               함께 일하고 싶습니다
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              데이터 분석 인턴십 기회에 대해 언제든 연락해주세요
+              LLM 서비스 기획·개발 인턴십 기회에 대해 언제든 연락해주세요
             </p>
           </div>
 
@@ -148,7 +148,7 @@ export function ContactSection() {
                     required
                     rows={4}
                     className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                    placeholder="안녕하세요, 데이터 분석 인턴십에 대해 문의드리고 싶습니다..."
+                    placeholder="안녕하세요, LLM 서비스 기획·개발 인턴십에 대해 문의드리고 싶습니다..."
                   />
                 </div>
                 
@@ -244,7 +244,7 @@ export function ContactSection() {
                   </div>
                   <div className="flex items-center gap-2">
                     <MessageCircle className="w-4 h-4" />
-                    <span>데이터 분석 인턴십 지원 중</span>
+                    <span>LLM 서비스 기획·개발 인턴십 지원 중</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <User className="w-4 h-4" />

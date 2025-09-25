@@ -1,22 +1,22 @@
-# 🎯 데이터 분석가 포트폴리오
+# 🎯 LLM 서비스 기획·개발자 포트폴리오
 
-#### 🧩 데이터로 비즈니스를 구축하고 성장시키는 제네럴리스트, 창업가의 시선으로 문제를 해결하는 데이터 분석가.
+#### 🧩 LLM 기술로 비즈니스 아이디어를 실제 가치로 만드는 서비스 기획자, 실무 경험을 바탕으로 실용적인 AI 서비스를 개발하는 LLM 개발자.
 
 <p align="center">
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Target-Commerce%20%26%20Fintech-00b894?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Focus-Customer%20Insight-6c5ce7?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Goal-Business%20Growth-fd79a8?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Target-LLM%20Service%20Planning-00b894?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Focus-PoC%20Development-6c5ce7?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Goal-AI%20Service%20Innovation-fd79a8?style=for-the-badge" />
 </p>
 
 ---
 
 ## 👨‍💻 About Me
 
-**"고객의 언어를 데이터로 번역하여 비즈니스 가치를 만드는 분석가"**
+**"LLM 기술로 비즈니스 아이디어를 실제 가치로 만드는 서비스 기획·개발자"**
 
 단순한 숫자 분석을 넘어 고객의 진짜 목소리를 찾고, 이를 비즈니스 성장으로 연결하는 일에 집중합니다. **실제 마켓컬리 리뷰 2,185건을 7개 핵심 지표로 정량화**하여 '포장 만족도'가 '재구매율'에 미치는 영향을 밝혀내는 등, 데이터에 숨겨진 구체적한 인사이트를 도출합니다.
 
